@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5, h6{margin:0; padding:0; font-weight:600; font-family:'Bungee
 h1 {font-size:80px;}
 h2 {font-size:70px;}
 h3 {font-size:55px;}
-p {margin:0 auto; margin-top: 25px; padding:0; font-family:'Lato'; font-weight:400; font-size:22px; opacity:0.9; font-family:'Open Sans';}
+p {margin:0 auto; margin-top: 25px; padding:0; font-weight:400; font-size:22px; opacity:0.9; font-family:'Open Sans';}
 span {font-family:'Lato'; font-weight:400;}
 section {position:relative; overflow:hidden; z-index:0; padding:75px 0;}
 main {margin:80px 0 0 0;}
@@ -57,9 +57,17 @@ header.hide {transform:translateY(-100%);}
 #footer {background:var(--primary-color); padding:100px 0;}
 #footer .contact-details h5, #footer .opening-details h5 {color:var(--white); font-family:'Open Sans';}
 #footer .contact-details p, #footer .opening-details p {color:var(--white); margin:0;}
-#footer .footer-logo {width:350px;}
-#footer .social-media-links {display:flex; align-items:center; justify-content:flex-end; gap:10px;}
-#footer .social-media-links .icon {width:50px;}
+#footer .footer-logo {width:300px;}
+/* #footer .social-media-links {display:flex; flex-direction: column; gap:15px;} */
+#footer .social-media-links {display:flex; align-items: center; justify-content: center; gap:15px;}
+#footer .footer-social-title {color: var(--white); margin: 0 0 10px 0; font-family:'Open Sans'; font-size: 22SSSpx;}
+#footer .social-media-links .icon {width: 50px;}
+#footer .social-media-links span {color: var(--white); font-family:'Open Sans';}
+#footer .social-media-links a {display: flex; gap: 10px; transition: 0.5s; width: fit-content;}
+/* #footer .social-media-links a:hover {transform: translateX(10px);} */
+#footer .social-media-links a:hover {transform: scale(1.2);}
+#footer .cc-content {color: var(--white); font-family:'Open Sans';}
+#footer .cc-content a {color: var(--white); text-decoration: underline;}
 
 /* contact us */
 .inner-ban{width:100%;background:url(../images/contactus/bg.jpg)no-repeat; background-size: cover;padding: 100px 0;}
@@ -184,8 +192,15 @@ span.error-msg{display: block; width:100%; text-align: left;color: var(--seconda
 .alla-cnt {flex:0 1 calc(100% - 270px);position: relative;z-index: 2;}
 .alla-cnt h4 {color:var(--white);}
 .alla-cnt p {font-size:20px; color:var(--white); margin:10px 0;}
-.alla-cnt a[href^=tel] {font-size:20px; font-family:'Open Sans'; color:var(--white); transition:all 0.5s ease;}
-.alla-loc:hover {background:var(--secondary-color);}
+.alla-cnt a[href^=tel] {font-size:20px; font-family:'Open Sans'; color:var(--white); transition:all 0.5s ease; margin: 10px 0; display: block;}
+/* .alla-loc:hover {background:var(--secondary-color);} */
+.alla-loc .order-btn {display: block; width: fit-content; padding: 10px 30px; border: 1px solid var(--white); border-radius: 50px; font-family:'Open Sans'; color: var(--primary-color); background-color: var(--white);}
+.indicator { display: inline-block; width: 15px; height: 15px; border-radius: 50%; background-color: gray; margin-left: 8px; position: absolute; top: 10px; right: 50px;}
+.open { background-color: #00cc44; box-shadow: 0 0 6px #00cc44;}
+.closed { background-color: #cc0000; box-shadow: 0 0 6px #cc0000;}
+.shop-opened {
+    border: 2px solid darkgreen; 
+}
 
 .did-sec{width: calc(100% - 200px);margin: 0 auto;position: relative;padding:0 0 75px 0;}
 .you-sec{background: var(--primary-color);position: relative;padding: 20px;overflow: hidden;}
