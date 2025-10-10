@@ -1,12 +1,44 @@
 document.addEventListener("DOMContentLoaded", function() {
     const branchTimings = {
+        "rugeley-branch": {
+            open: { hours: 16, minutes: 30 },   // 4:30 PM
+            close: { hours: 7, minutes: 30 }    // 7:30 AM (next day)
+        },
+        "brownhills-branch": {
+            open: { hours: 16, minutes: 30 },   // 4:30 PM
+            close: { hours: 7, minutes: 30 }    // 7:30 AM (next day)
+        },
+        "cannock-branch": {
+            open: { hours: 16, minutes: 30 },   // 4:30 PM
+            close: { hours: 7, minutes: 30 }    // 7:30 AM (next day)
+        },
+        "halesowen-branch": {
+            open: { hours: 16, minutes: 30 },   // 4:30 PM
+            close: { hours: 4, minutes: 30 }    // 4:30 AM (next day)
+        },
+        "birmingham-branch": {
+            open: { hours: 16, minutes: 30 },   // 4:30 PM
+            close: { hours: 7, minutes: 30 }    // 7:30 AM (next day)
+        },
+        "upperGornal-branch": {
+            open: { hours: 16, minutes: 30 },   // 4:30 PM
+            close: { hours: 4, minutes: 30 }    // 4:30 AM (next day)
+        },
         "wednesbury-branch": {
-            open: 15, // 11 AM
-            close: 3 // 10 PM
+            open: { hours: 19, minutes: 30 },   // 7:30 PM
+            close: { hours: 7, minutes: 30 }    // 7:30 AM (next day)
         },
         "willenhall-branch": {
-            open: 1, // 10 AM
-            close: 3 // 11 PM
+            open: { hours: 19, minutes: 30 },   // 7:30 PM
+            close: { hours: 7, minutes: 30 }    // 7:30 AM (next day)
+        },
+        "wolverhampton-branch": {
+            open: { hours: 19, minutes: 30 },   // 7:30 PM
+            close: { hours: 7, minutes: 30 }    // 7:30 AM (next day)
+        },
+        "greatBarr-branch": {
+            open: { hours: 19, minutes: 31 },   // 7:31 PM
+            close: { hours: 7, minutes: 31 }    // 7:31 AM (next day)
         }
     };
 
@@ -29,15 +61,35 @@ document.addEventListener("DOMContentLoaded", function() {
 
         Object.keys(branchTimings).forEach(branchId => {
             const indicator = document.getElementById(branchId);
-
             if (!indicator) return;
 
             const branch = branchTimings[branchId];
-            const openTimeInMinutes = branch.open * 60;
-            const closeTimeInMinutes = branch.close * 60;
+            const openTimeInMinutes = branch.open.hours * 60 + branch.open.minutes;
+            const closeTimeInMinutes = branch.close.hours * 60 + branch.close.minutes;
 
-            // Check if current time is within opening hours
-            if (currentTimeInMinutes >= openTimeInMinutes && currentTimeInMinutes < closeTimeInMinutes) {
+            let isOpen = false;
+
+            // Handle businesses that cross midnight (close time < open time)
+            if (closeTimeInMinutes < openTimeInMinutes) {
+                // Business crosses midnight (e.g., 12:00 to 03:00)
+                // Only open if we're in the "overnight" period
+                // This means we're either in the evening (after open time) OR early morning (before close time)
+                if (currentTimeInMinutes >= openTimeInMinutes) {
+                    // Evening hours (e.g., after 12:00 PM)
+                    isOpen = true;
+                } else if (currentTimeInMinutes < closeTimeInMinutes) {
+                    // Early morning hours (e.g., before 3:00 AM)
+                    isOpen = true;
+                } else {
+                    // Morning hours between close and open (e.g., 3:00 AM - 12:00 PM) - CLOSED
+                    isOpen = false;
+                }
+            } else {
+                // Business operates within the same day
+                isOpen = currentTimeInMinutes >= openTimeInMinutes && currentTimeInMinutes < closeTimeInMinutes;
+            }
+
+            if (isOpen) {
                 indicator.classList.add("open");
                 indicator.classList.remove("closed");
             } else {
