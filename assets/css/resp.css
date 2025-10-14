@@ -46,6 +46,11 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .you-sec:after {right: 100px;}
     .know-sec p{font-size: 21px;}
     .know-sec h3 {font-size: 48px;}
+    .alla-cnt h4 {font-size: 20px;}
+    .alla-cnt p {font-size: 16px;}
+    .alla-cnt a[href^=tel] {font-size: 18px;}
+    .alla-loc .order-btn {font-size: 16px; padding: 5px 20px;}
+    .indicator {top: 5px;}
     /* franchise */
     .franchise-hero-section .process-card-container .process-card {padding: 30px;}
     .franchise-hero-section .process-card-container .process-para {font-size: 18px;}
@@ -100,6 +105,7 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .know-sec{padding: 40px;}
     .alla-cnt h4{font-size: 24px;}
     .alla-cnt p,.alla-cnt a[href^=tel]{font-size: 18px;}
+    .alla-loc .order-btn {margin: auto;}
     .know-sec h3{font-size: 44px;}
     .know-sec p{font-size: 18px;}
     .know-sec a{font-size: 16px;}
@@ -192,6 +198,10 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
 
     /* allergens */
     .aller-img {border-radius: 30px;}
+    .gallery-btn {padding: 10px 5px;font-size: 12px;}
+    .allergy-para {font-size: 16px;}
+    .allergy-title {font-size: 22px;}
+    .allergy-subtitle {font-size: 18px;}
 
     /* stores */
     .stories-sec {margin-top: -40px;}
@@ -201,6 +211,7 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .you-sec:after {right: 40px;height: 560px;}
     .story-list {row-gap: 30px;}
     .alla-cnt p, .alla-cnt a[href^=tel],.know-sec p{font-size: 17px;}
+    .indicator {right: 0;}
 
     /* franchise */
     .franchise-hero-section .content-wrapper {margin-top: -80px;}
@@ -228,7 +239,7 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .navbar .nav-links {top:85px;}
     /* footer */
     #footer .contact-details {margin:25px 0;}
-    #footer .social-media-links {justify-content:flex-start; margin:0 0 25px 0;}
+    #footer .social-media-links {justify-content:center; margin:0 0 25px 0;}
     #footer .cc-content {font-size: 16px;}
     /* contact us */
     .contact-info{padding: 50px 0;}
@@ -273,17 +284,32 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .hero-news-section img.poster-3 {margin-top: 20px;}
     /* allergen */
     .allergen-sec {padding: 0 0 50px 0;margin-top: -30px;}
+    .gallery-buttons { flex-direction: row; overflow-x: auto; padding: 15px; gap: 10px; }
+    .gallery-btn { flex-direction: column; min-width: fit-content; gap: 8px; padding: 10px; }
+    .gallery-btn:hover,
+    .gallery-btn.active {transform: translateX(0) translateY(0); animation: none;}
+    .gallery-main-img { height: 300px; }
+    .gallery-buttons {box-shadow: none; border-radius: 0;}
+    .gallery-buttons::-webkit-scrollbar { height: 0; }
+    .allergy-para {font-size: 14px;}
+    .allergy-ul {margin: 20px 0 0 30px;}
+    .allergy-ul li {font-size: 15px;}
+    .allergy-title {font-size: 22px;}
+    .allergy-subtitle {font-size: 18px;}
     /* stores */
+    .alla-loc {height: 100%;}
     .alla-map {flex: 0 1 150px;}
     .alla-loc:after{width:145px;height: 73px;}
     .alla-cnt h4 {font-size: 22px;}
     .alla-cnt p, .alla-cnt a[href^=tel], .know-sec p{font-size: 16px;}
+    .indicator {top: -25px;}
     .know-sec{position: relative;z-index: 2;}
-    .you-sec:after{opacity: 0.5;}
+    .you-sec:after{opacity: 0.3; height: 130%; width: 270px;}
     .did-sec{padding: 0 15px 50px;}
     .stories-sec{padding-bottom: 50px;}
     .know-sec a {font-size: 14px;border-radius: 40px 0 40px 0;}
     .know-sec h3{font-size: 32px;}
+    
     /* franchise */
     .search-content h2 {font-size: 40px;}
     .franchise-hero-section .bg {height: 65.7%;}
@@ -293,6 +319,16 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .search-content p {font-size: 16px;}
     .franchise-hero-section .process-card .process-para.para-3 {padding: 0 50px 0 0;}
     .franchise-hero-section .process-card .process-para.para-4 {padding: 0 0 0 50px;}
+
+    .no-sm-gutters {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .no-sm-gutters > .col,
+    .no-sm-gutters > [class*="col-"] {
+        padding-right: 0;
+        padding-left: 0;
+    }
 }
 @media (max-width: 575px) {
 

@@ -1,3 +1,4 @@
+// Loader
 // const loader = document.getElementById("loader");
 // window.addEventListener("load", () => {
 //     setTimeout(() => {
@@ -6,11 +7,14 @@
 //     }, 500)
 // });
 
+// Lazy Loading
 const images = document.querySelectorAll("img");
 images.forEach((img) => {
     img.setAttribute('loading', 'lazy');
 })
 
+
+// Navigation 
 const openMenu = document.getElementById("openmenu");
 const slide = document.querySelector(".nav-links");
 const links = document.querySelectorAll(".nav-link");
@@ -20,26 +24,27 @@ const overlay = document.getElementById("overlay");
 const menuNavLink = document.querySelector(".menu-nav-link-li");
 const menuDropDown = document.querySelector(".menu-dropdown");
 const activePage = window.location.pathname;
-
+// open menu
 openMenu.addEventListener('click', () => {
     openMenu.classList.toggle("active");
     slide.classList.toggle("active");
     body.classList.toggle("active");
 })
-
+// close menu
 links.forEach((link) => {
     link.addEventListener('click', () => {
         openMenu.classList.remove("active");
         slide.classList.remove("active");
         body.classList.remove("active");
     })
-
+    // active link for current page
     const linkPath = new URL(link.href).pathname; 
     if (linkPath === activePage) {
         link.classList.add("active");
     }
 })
 
+// media query for mobile menu
 const media = window.matchMedia("(max-width: 767px)");
 mediaFunction(media);
 function toggleMenu(active) {
@@ -47,7 +52,6 @@ function toggleMenu(active) {
   slide.classList.toggle("active", active);
   body.classList.toggle("active", active);
 }
-
 function mediaFunction(media) {
   const isMobile = media.matches;
 
@@ -67,16 +71,15 @@ function mediaFunction(media) {
 // home video banner
 function adjustHeroHeight() {
     const hero = document.querySelector(".home-hero-section");
-    const windowHeight = window.innerHeight;
-    hero.style.height = windowHeight + "px"; 
+    if (hero) {
+        const windowHeight = window.innerHeight;
+        hero.style.height = windowHeight + "px";
+    }
 }
 window.addEventListener("load", adjustHeroHeight);
 window.addEventListener("resize", adjustHeroHeight);
 
-
-/* ------------------------
-PopUp form Validation
---------------------------- */ 
+// franchise form
 const form = document.getElementById("fran-form");
 const firstName = document.getElementById("firstName-input");
 const lastName = document.getElementById("lastName-input");
@@ -86,11 +89,13 @@ const locationField = document.getElementById("location-input");
 const referral = document.getElementById("referral-input");
 const submitBtn = document.getElementById("submitBtn");
 
-form.addEventListener('submit',(e)=> {
-    if(!validateInputs()) {
-        e.preventDefault();
-    } 
-})
+if (form) {
+  form.addEventListener('submit', (e) => {
+    if (!validateInputs()) {
+      e.preventDefault();
+    }
+  });
+}
 
 function validateInputs() {
     const firstNameVal = firstName.value.trim();
@@ -192,14 +197,53 @@ const validateEmail = (email) => {
     );
 };
 
+// Allergens gallery Buttons
+document.addEventListener('DOMContentLoaded', function() {
+    const galleryButtons = document.querySelectorAll('.gallery-btn');
+    const mainImage = document.getElementById('gallery-cover-img');
+    const mainImgWrapper = document.querySelector('.main-img-wrapper');
+    
+    // Add click event to each button
+    galleryButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Update active button
+            galleryButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Get new image details
+            const newSrc = this.getAttribute('mainsrc');
+            const newAlt = this.getAttribute('mainalt');
+            
+            // Create a temporary image for preloading
+            const tempImage = new Image();
+            tempImage.src = newSrc;
+            
+            tempImage.onload = function() {
+                // Create fade-out effect
+                mainImage.style.transition = 'opacity 0.3s ease';
+                mainImage.style.opacity = '0';
+                
+                setTimeout(() => {
+                    // Update the main image
+                    mainImage.src = newSrc;
+                    mainImage.alt = newAlt;
+                    
+                    // Create fade-in effect
+                    mainImage.style.opacity = '1';
+                }, 300);
+            };
+        });
+    });
+});
 
 
-$('.samples-slider').owlCarousel({
+// Owl Carousel on event page
+$('.awards-slides').owlCarousel({
     loop: true,
     margin: 0,
     nav: true,
     dots: false,
-    navText: ["<i class='fa fa-caret-left'></i>", "<i class='fa fa-caret-right'></i>"],
+    navText: ["<div><img src='./assets/images/events/pizza.png' class='img-fluid arrow-left'></div>", "<div><img src='./assets/images/events/pizza.png' class='img-fluid arrow-right'></div>"],
     smartSpeed: 1000,
     autoplay: false,
     autoplayTimeout: 4000,
@@ -215,20 +259,7 @@ $('.samples-slider').owlCarousel({
             items: 3
         },
         1200: {
-            items: 4
+            items: 1
         }
     }
-})
-
-lc_lightbox('.lightbox', {
-    wrap_class: 'lcl_fade_oc',
-    gallery: false,
-    thumb_attr: 'data-lcl-thumb',
-    skin: 'light',
-    radius: 4,
-    padding: 0,
-    border_w: 0
 });
-
-
-
