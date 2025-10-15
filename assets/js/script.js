@@ -38,7 +38,7 @@ links.forEach((link) => {
         body.classList.remove("active");
     })
     // active link for current page
-    const linkPath = new URL(link.href).pathname; 
+    const linkPath = new URL(link.href).pathname;
     if (linkPath === activePage) {
         link.classList.add("active");
     }
@@ -48,23 +48,23 @@ links.forEach((link) => {
 const media = window.matchMedia("(max-width: 767px)");
 mediaFunction(media);
 function toggleMenu(active) {
-  openMenu.classList.toggle("active", active);
-  slide.classList.toggle("active", active);
-  body.classList.toggle("active", active);
+    openMenu.classList.toggle("active", active);
+    slide.classList.toggle("active", active);
+    body.classList.toggle("active", active);
 }
 function mediaFunction(media) {
-  const isMobile = media.matches;
+    const isMobile = media.matches;
 
-  dropLinks.forEach((dropLink) => {
-    dropLink.addEventListener('click', () => {
-      toggleMenu(isMobile);
+    dropLinks.forEach((dropLink) => {
+        dropLink.addEventListener('click', () => {
+            toggleMenu(isMobile);
+        });
     });
-  });
 
-  menuNavLink.addEventListener('click', () => {
-    menuDropDown.classList.toggle("active");
-    toggleMenu(isMobile);
-  });
+    menuNavLink.addEventListener('click', () => {
+        menuDropDown.classList.toggle("active");
+        toggleMenu(isMobile);
+    });
 }
 
 
@@ -79,105 +79,186 @@ function adjustHeroHeight() {
 window.addEventListener("load", adjustHeroHeight);
 window.addEventListener("resize", adjustHeroHeight);
 
-// franchise form
+
+// franchise form with Selectize support
 const form = document.getElementById("fran-form");
 const firstName = document.getElementById("firstName-input");
 const lastName = document.getElementById("lastName-input");
+const address = document.getElementById("address-input");
+const postcode = document.getElementById("postcode-input");
+const city = document.getElementById("city-input");
 const email = document.getElementById("email-input");
 const phone = document.getElementById("phone-input");
-const locationField = document.getElementById("location-input");
-const referral = document.getElementById("referral-input");
+const occupation = document.getElementById("occupation-input");
+const locationField = document.getElementById("locationSets");
+const investment = document.getElementById("invest-input");
 const submitBtn = document.getElementById("submitBtn");
 
 if (form) {
-  form.addEventListener('submit', (e) => {
-    if (!validateInputs()) {
-      e.preventDefault();
-    }
-  });
+    form.addEventListener('submit', (e) => {
+        if (!validateInputs()) {
+            e.preventDefault();
+        }
+    });
 }
 
 function validateInputs() {
     const firstNameVal = firstName.value.trim();
     const lastNameVal = lastName.value.trim();
+    const addressVal = address.value.trim();
+    const postcodeVal = postcode.value.trim();
+    const cityVal = city.value.trim();
     const emailVal = email.value.trim();
     const phoneVal = phone.value.trim();
-    const locationVal = locationField.value.trim();
-    const referralVal = referral.value.trim();
+    const occupationVal = occupation.value.trim();
+    const locationVal = getSelectedLocations();
+    const investmentVal = investment.value.trim();
     let success = true;
 
     // First Name
-    if(firstNameVal === '') {
+    if (firstNameVal === '') {
         success = false;
-        setError(firstName,'Please enter your first name*')
-    } else if(/\d/.test(firstNameVal)) {
+        setError(firstName, 'Please enter your first name*');
+    } else if (/\d/.test(firstNameVal)) {
         success = false;
-        setError(firstName,'First name cannot contain numbers*')
+        setError(firstName, 'First name cannot contain numbers*');
     } else {
         setSuccess(firstName);
     }
 
     // Last Name
-    if(lastNameVal === '') {
+    if (lastNameVal === '') {
         success = false;
-        setError(lastName,'Please enter your last name*')
-    } else if(/\d/.test(lastNameVal)) {
+        setError(lastName, 'Please enter your last name*');
+    } else if (/\d/.test(lastNameVal)) {
         success = false;
-        setError(lastName,'Last name cannot contain numbers*')
+        setError(lastName, 'Last name cannot contain numbers*');
     } else {
         setSuccess(lastName);
     }
 
+    // Address
+    if (addressVal === '') {
+        success = false;
+        setError(address, 'Please enter your address*');
+    } else {
+        setSuccess(address);
+    }
+
+    // Postcode
+    if (postcodeVal === '') {
+        success = false;
+        setError(postcode, 'Please enter your postcode*');
+    } else if (!/^[A-Z]{1,2}[0-9][A-Z0-9]? ?[0-9][A-Z]{2}$/i.test(postcodeVal)) {
+        success = false;
+        setError(postcode, 'Please enter a valid UK postcode*');
+    } else {
+        setSuccess(postcode);
+    }
+
+    // City
+    if (cityVal === '') {
+        success = false;
+        setError(city, 'Please enter your city*');
+    } else if (/\d/.test(cityVal)) {
+        success = false;
+        setError(city, 'City name cannot contain numbers*');
+    } else {
+        setSuccess(city);
+    }
+
     // Email
-    if(emailVal === '') {
+    if (emailVal === '') {
         success = false;
-        setError(email,'Email is required*')
-    }
-    else if(!validateEmail(emailVal)) {
+        setError(email, 'Email is required*');
+    } else if (!validateEmail(emailVal)) {
         success = false;
-        setError(email,'Please enter a valid Email*')
-    }
-    else {
-        setSuccess(email)
+        setError(email, 'Please enter a valid Email*');
+    } else {
+        setSuccess(email);
     }
 
     // Phone
-    if(phoneVal === '') {
+    if (phoneVal === '') {
         success = false;
-        setError(phone,'Please enter your phone number*')
-    } else if(!/^[0-9]{7,15}$/.test(phoneVal)) {
+        setError(phone, 'Please enter your phone number*');
+    } else if (!/^[0-9]{7,15}$/.test(phoneVal)) {
         success = false;
-        setError(phone,'Please enter a valid phone number*')
+        setError(phone, 'Please enter a valid phone number*');
     } else {
         setSuccess(phone);
     }
 
-    // Location
-    if(locationVal === '') {
+    // Occupation
+    if (occupationVal === '') {
         success = false;
-        setError(locationField,'Preferred location required*')
+        setError(occupation, 'Please enter your current occupation*');
+    } else {
+        setSuccess(occupation);
+    }
+
+    // Location (Multi-select validation)
+    if (locationVal.length === 0) {
+        success = false;
+        setError(locationField, 'Please select at least one location*');
     } else {
         setSuccess(locationField);
     }
 
-    // Referral
-    if(referralVal === '') {
+    // Investment
+    if (investmentVal === '') {
         success = false;
-        setError(referral,'Please tell us how you heard about us*')
+        setError(investment, 'Please enter your investment amount*');
+    } else if (!/^[0-9,.\s£$€]*$/.test(investmentVal)) {
+        success = false;
+        setError(investment, 'Please enter a valid investment amount*');
     } else {
-        setSuccess(referral);
+        setSuccess(investment);
     }
 
     return success;
 }
 
-function setError(element,message) {
+// Helper function to get selected locations (works with both native select and Selectize)
+function getSelectedLocations() {
+    // Check if Selectize is being used
+    if (locationField.selectize) {
+        return locationField.selectize.getValue();
+    } else {
+        // Native multi-select
+        const selectedOptions = locationField.selectedOptions;
+        const selectedValues = [];
+        for (let i = 0; i < selectedOptions.length; i++) {
+            selectedValues.push(selectedOptions[i].value);
+        }
+        return selectedValues;
+    }
+}
+
+function setError(element, message) {
     const inputGroup = element.parentElement;
     const errorElement = inputGroup.querySelector(".error-msg");
 
     errorElement.innerText = message;
     inputGroup.classList.add('error');
     inputGroup.classList.remove('success');
+    
+    // Add red border - handle both input and select elements
+    if (element.style) {
+        element.style.borderColor = 'red';
+        element.style.borderWidth = '2px';
+    }
+    
+    // For Selectize, also style the wrapper
+    if (element.selectize) {
+        const selectizeControl = element.selectize.$control;
+        if (selectizeControl) {
+            selectizeControl.css({
+                'border-color': 'red',
+                'border-width': '2px'
+            });
+        }
+    }
 }
 
 function setSuccess(element) {
@@ -187,50 +268,67 @@ function setSuccess(element) {
     errorElement.innerText = '';
     inputGroup.classList.add('success');
     inputGroup.classList.remove('error');
+    
+    // Reset border color
+    if (element.style) {
+        element.style.borderColor = '#000';
+        element.style.borderWidth = '1px';
+    }
+    
+    // For Selectize, reset the wrapper border
+    if (element.selectize) {
+        const selectizeControl = element.selectize.$control;
+        if (selectizeControl) {
+            selectizeControl.css({
+                'border-color': '#000',
+                'border-width': '1px'
+            });
+        }
+    }
 }
-
+// Email validattion
 const validateEmail = (email) => {
     return String(email)
-    .toLowerCase()
-    .match(
-        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    );
+        .toLowerCase()
+        .match(
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        );
 };
 
 // Allergens gallery Buttons
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const galleryButtons = document.querySelectorAll('.gallery-btn');
     const mainImage = document.getElementById('gallery-cover-img');
     const mainImgWrapper = document.querySelector('.main-img-wrapper');
-    
+
     // Add click event to each button
     galleryButtons.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             // Update active button
             galleryButtons.forEach(btn => btn.classList.remove('active'));
             this.classList.add('active');
-            
+
             // Get new image details
             const newSrc = this.getAttribute('mainsrc');
             const newAlt = this.getAttribute('mainalt');
-            
+
             // Create a temporary image for preloading
             const tempImage = new Image();
             tempImage.src = newSrc;
-            
-            tempImage.onload = function() {
+
+            tempImage.onload = function () {
                 // Create fade-out effect
                 mainImage.style.transition = 'opacity 0.3s ease';
                 mainImage.style.opacity = '0';
-                
+
                 setTimeout(() => {
                     // Update the main image
                     mainImage.src = newSrc;
                     mainImage.alt = newAlt;
-                    
+
                     // Create fade-in effect
                     mainImage.style.opacity = '1';
-                }, 300);
+                }, 200);
             };
         });
     });
@@ -263,3 +361,4 @@ $('.awards-slides').owlCarousel({
         }
     }
 });
+

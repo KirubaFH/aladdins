@@ -180,6 +180,26 @@ header.hide {transform:translateY(-100%);}
 .franchise-hero-section .process-card-container .batch {position: absolute; z-index: 1; filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5)); top: 0; bottom: 0; left: 0; right: 0; margin: auto;}
 .search-section .search-content {background: var(--white); padding: 50px;}
 .search-section::before {content: ""; position: absolute; width: 100%; height: 70px; top: 0; left: 0; right: 0; bottom: 0; margin: auto; z-index: -1; background: var(--primary-color);}
+#fran-form .input-group .selectize-control { width: 100% !important; position: relative !important; opacity: 1 !important; left: 0 !important; display: block !important; visibility: visible !important; }
+#fran-form .input-group .selectize-control.selectize-control.multi { display: block !important; }
+#fran-form .input-group .selectize-input { border: 1px solid #000 !important; width: 100% !important; padding: 15px !important; font-family: "open sans" !important; font-size: 20px !important; border-radius: 5px !important; background: white !important; box-shadow: none !important; min-height: 62px !important; height: 54px !important; display: flex !important; align-items: center !important; flex-wrap: wrap !important; gap: 5px !important; overflow-x: hidden !important; overflow-y: auto; text-align: left;}
+#fran-form .input-group .selectize-input input { display: none !important; width: 0 !important; height: 0 !important; padding: 0 !important; margin: 0 !important; opacity: 0 !important; position: absolute !important; }
+#fran-form .input-group .selectize-input > div { background: var(--primary-color) !important; color: white !important; border-radius: 3px !important; padding: 4px 20px 4px 10px !important; margin: 2px 3px 2px 0 !important; font-size: 14px !important; border: none !important; line-height: 1.2 !important; }
+#fran-form .input-group .selectize-input > div > a { color: white !important; opacity: 0.7 !important; margin-left: 0px !important; border: none !important; background: none !important; }
+#fran-form .input-group .selectize-input > div > a:hover { opacity: 1 !important; background: none !important; }
+#fran-form .input-group .selectize-input:not(.has-items)::before { content: "Preferred Location*" !important; color: #666 !important; font-family: "open sans" !important; font-size: 20px; position: absolute !important; left: 15px !important; top: 50% !important; transform: translateY(-50%) !important; pointer-events: none !important; }
+#fran-form .input-group .selectize-input.has-items::before { display: none !important; }
+#fran-form .input-group .selectize-dropdown { border: 1px solid #000 !important; border-top: none !important; border-radius: 0 0 5px 5px !important; box-shadow: none !important; margin-top: -1px !important; z-index: 1000 !important; }
+#fran-form .input-group .selectize-dropdown .option { padding: 12px 15px !important; font-family: "open sans" !important; font-size: 18px !important; border-bottom: 1px solid #f0f0f0 !important; }
+#fran-form .input-group .selectize-dropdown .option:last-child { border-bottom: none !important; }
+#fran-form .input-group .selectize-dropdown .active { background: #f8f9fa !important; color: #000 !important; }
+#fran-form .input-group .selectize-dropdown .selected { background: var(--primary-color) !important; color: white !important; }
+#accordion {max-width: 960px;margin: 0 auto;}
+.accord-btn {background: none; display: flex; align-items: center; justify-content: space-between; width: 100%; cursor: pointer;}
+.accord-btn span {font-family: 'Bungee'; transition: 0.5s;}
+.accord-btn .accord-title {font-size: 36px; color: var(--primary-color);}
+.accord-btn .arrow-icon {font-size: 30px; color: var(--primary-color);}
+.accord-btn.collapsed .arrow-icon {transform: rotate(-180deg);}
 
 
 /* pradeep -  franchise form*/
@@ -190,7 +210,7 @@ header.hide {transform:translateY(-100%);}
 #fran-form .input-group{flex:0 1 47.5%;width: 47.5%;padding: 0;margin: 0;}
 #fran-form .submit-btn{flex: 0 1 calc(100% - 40px); padding: 15px;background: var(--primary-color);color: var(--white);transition: all 0.5s ease;font-family: "open sans";font-weight: 300;font-size: 20px;border-radius: 10px;margin: 0 auto;}
 #fran-form .submit-btn:hover{background: var(--secondary-color);}
-#fran-form .input-group input{border:1px solid #000 !important;width: 100%;padding:15px;font-family: "open sans";font-size: 20px;}
+#fran-form .input-group input{border:1px solid #000 !important;width: 100%;padding:15px;font-family: "open sans";font-size: 20px; border-radius: 5px;}
 span.error-msg{display: block; width:100%; text-align: left;color: var(--secondary-color);margin-top: 10px;font-family: "open sans";font-size: 16px;}
 
 
