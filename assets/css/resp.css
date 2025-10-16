@@ -29,6 +29,7 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .kit-lft{margin-top: -120px;}
     .kitchen-sec h3,.latest-news h3,.honor-tit h3{font-size: 48px;}
     .kit-main p ,.honor-cnt p{font-size: 21px;}
+    .awards-slides .owl-item img {height: 450px; object-fit: cover;}
     /* homepage */
     .home-banner-section .banner-wrapper {height: 500px; border-radius: 0 50px 50px 0;}
     .home-banner-section .banner-wrapper::after {border-radius: 50px;}
@@ -51,6 +52,7 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .alla-cnt a[href^=tel] {font-size: 18px;}
     .alla-loc .order-btn {font-size: 16px; padding: 5px 20px;}
     .indicator {top: 5px;}
+    .food-gallery {height: 450px;}
     /* franchise */
     .franchise-hero-section .process-card-container .process-card {padding: 30px;}
     .franchise-hero-section .process-card-container .process-para {font-size: 18px;}
@@ -84,6 +86,11 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .kitchen-sec h3,.latest-news h3,.honor-tit h3{font-size: 44px;}
     .kit-main p ,.honor-cnt p{font-size: 19px;}
     .honor-wall:before{width:calc(100% - 50px);max-height: 280px;top:40%;transform: translate(-50% , -60%);}
+    .news-card img {height: 220px;}
+    .news-card h4 {font-size: 22px;}
+    .news-card p {font-size: 16px;}
+    /* .owl-carousel {width: 90%; margin: auto;} */
+    .awards-slides .owl-item img {height: 330px;}
     /* homepage */
     .home-banner-section .banner-wrapper {height: 400px; border-radius: 0 50px 50px 0;}
     .home-banner-section .banner-wrapper::after {border-radius: 50px;}
@@ -109,6 +116,12 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .know-sec h3{font-size: 44px;}
     .know-sec p{font-size: 18px;}
     .know-sec a{font-size: 16px;}
+    .food-gallery {height: 400px;}
+    .food-gallery .food-title {font-size: 30px;}
+    .food-gallery .food-gallery-img {transform: translateY(-25px);}
+    .about-content p {font-size: 18px;}
+    .about-content .para-container em {font-size: 20px;}
+    .food-gallery .icon-holder {width: 80px;padding: 15px;}
 
     /* franchise */
     .franchise-hero-section .content-wrapper {padding: 75px 50px;}
@@ -187,7 +200,8 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .kit-lft {padding: 0 30px 0 0;}
     .kit-lft:after {width: 220px;height: 220px;right:20px;bottom:-10px;border-radius: 30px;}
     .kit-img{border-radius: 30px;}
-    .kitchen-sec h3,.latest-news h3,.honor-tit h3{font-size: 34px;margin-bottom: 25px;}
+    .kitchen-sec h3,.honor-tit h3{font-size: 34px;margin-bottom: 25px;}
+    .latest-news h3 {font-size: 34px;}
     .kit-main p ,.honor-cnt p{font-size: 17px;}
     .kit-img{height:100%;}
     .kit-rht{margin-top: -30px;}
@@ -195,6 +209,8 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .honor-tit {padding: 0;}
     .honor-wall:before{max-height: 240px;border-radius: 20px;width: calc(100% - 20px);}
     .award {padding-top: 20px;}
+    .awards-slides .owl-item img {height: 270px;}
+
 
     /* allergens */
     .aller-img {border-radius: 30px;}
@@ -212,6 +228,10 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .story-list {row-gap: 30px;}
     .alla-cnt p, .alla-cnt a[href^=tel],.know-sec p{font-size: 17px;}
     .indicator {right: 0;}
+    .food-gallery {height: 300px;}
+    .food-gallery .food-title {font-size: 26px;}
+    .about-content p {font-size: 16px;}
+    .food-section .about-content::after {height: 63%;}
 
     /* franchise */
     .franchise-hero-section .content-wrapper {margin-top: -80px;}
@@ -272,6 +292,8 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .kit-main p, .honor-cnt p {font-size: 16px;}
     .honor-main .honor-tit:last-child h3{margin: 0;}
     .kitchen-sec h3 br{display: none;}
+    .awards-slides .owl-item img {height: 180px;}
+    .awards-slides .owl-nav button {width: 30px;height: 30px;font-size: 22px !important;}
     /* homepage */
     .home-wait-section .wait-content-wrapper .wait-title-wrapper {margin: 0 0 30px 0;}
     .home-wait-section .wait-content-wrapper .wait-title-wrapper h3 {text-align: center; transform: scale(1.1) translateX(0px);}
@@ -313,6 +335,8 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .stories-sec{padding-bottom: 50px;}
     .know-sec a {font-size: 14px;border-radius: 40px 0 40px 0;}
     .know-sec h3{font-size: 32px;}
+    .food-gallery {height: 350px;}
+    .food-section .about-content::after {height: 52%;}
     
     /* franchise */
     .search-content h2 {font-size: 40px;}
@@ -369,6 +393,9 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .home-app-section::after {width: 250px; height: 400px;}
     /* events */
     .kitchen-sec h3, .latest-news h3, .honor-tit h3 {font-size: 30px;}
+    .awards-slides .owl-item img {height: 160px;} 
+    .awards-slides .owl-nav .owl-next {right: -10px;}
+    .awards-slides .owl-nav .owl-prev {left: -10px;}
     /* allergens */
     .aller-img {border-radius: 25px;}
     /* stores */
@@ -376,6 +403,10 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .know-sec {padding: 20px;}
     .know-sec h3{font-size: 30px;}
     .alla-cnt h4 {font-size: 20px;}
+    .about-content .para-container {padding: 0 20px 50px;}
+    .food-gallery {height: auto;}
+    .food-section .about-content::before {height: 95%;}
+    .food-section .about-content::after {height: 38%;}
     /* franchise */
     #fran-form {flex-direction: column;}
     #fran-form .input-group {width: 100%; margin: auto;}
@@ -396,4 +427,11 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
 
 @media (max-width: 425px) {
     .home-app-section .home-app-wrapper {width: 100%; max-width: 400px;}
+    .food-section .about-content::after {height: 43%;}
+    .awards-slides .owl-item img {height: 130px;} 
+}
+
+@media (max-width: 360px) {
+    .food-section .about-content::after {height: 48%;}
+    .awards-slides .owl-item img {height: 100px;} 
 }

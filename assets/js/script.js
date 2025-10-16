@@ -341,7 +341,7 @@ $('.awards-slides').owlCarousel({
     margin: 0,
     nav: true,
     dots: false,
-    navText: ["<div><img src='./assets/images/events/pizza.png' class='img-fluid arrow-left'></div>", "<div><img src='./assets/images/events/pizza.png' class='img-fluid arrow-right'></div>"],
+    navText: ["<div><i class='fa-solid fa-chevron-left'></i></div>", "<div><i class='fa-solid fa-chevron-right'></i></div>"],
     smartSpeed: 1000,
     autoplay: false,
     autoplayTimeout: 4000,
@@ -351,10 +351,10 @@ $('.awards-slides').owlCarousel({
             items: 1
         },
         576: {
-            items: 2
+            items: 1
         },
         768: {
-            items: 3
+            items: 1
         },
         1200: {
             items: 1

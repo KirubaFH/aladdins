@@ -86,6 +86,7 @@ header.hide {transform:translateY(-100%);}
 
 /* home page */
 .home-hero-section {position: relative;padding: 0;overflow: hidden; }
+.home-hero-section::before {content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; background: var(--black); opacity: 0.5;}
 #main-video {position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: cover; z-index: 0;}
 .input-group {background: var(--white); padding: 10px; margin: 25px 0 0 0; width: 500px;}
 .home-hero-content {position: absolute; top: 0; left: 0; right: 0; bottom: 0; margin: auto; display: flex; width: 100%; height: 100%; flex-direction: column; align-items: center; justify-content: center; z-index: 1;}
@@ -136,11 +137,12 @@ header.hide {transform:translateY(-100%);}
 .latest-news h3{color: var(--primary-color);text-align: center;}
 .latest-lst > div {overflow: hidden;}
 /* .latest-lst > div img{width:100%;} */
+/* .awards-slides {width: 90%; margin: auto;} */
 .owl-carousel .owl-item img {width: auto; margin: auto;}
 .awards-slides .owl-item img {display: block; width: auto !important; margin: auto;}
 .awards-slides .item {padding: 0 0 20px 0;}
 .owl-theme .owl-nav [class*=owl-]:hover {background: transparent; color: #000000;}
-.awards-slides .owl-nav button {display: inline; width: 40px; height: 40px; position: absolute; top: 0; bottom: 0; margin: auto !important;}
+.awards-slides .owl-nav button {display: inline; width: 40px; height: 40px; position: absolute; top: 0; bottom: 0; margin: auto !important; display: flex; align-items: center; justify-content: center; font-size: 30px !important; color: var(--primary-color) !important;}
 .awards-slides .owl-nav button img {transition: 0.5s;}
 .awards-slides .owl-nav .owl-prev {left: 0;}
 .awards-slides .owl-nav .owl-next {right: 0;}
@@ -265,7 +267,71 @@ span.error-msg{display: block; width:100%; text-align: left;color: var(--seconda
 .open { background-color: #00cc44; box-shadow: 0 0 6px #00cc44; background: linear-gradient(0deg, #00cc44 40%, white 110%); box-shadow: 0px 0px 15px 0px rgb(0, 204, 68);}
 .closed { background-color: #cc0000; box-shadow: 0 0 6px #cc0000; background: linear-gradient(0deg, #ff0400 40%, white 110%); box-shadow: 0px 0px 15px 0px rgb(255 0 0);}
 .shop-opened {border: 2px solid darkgreen;}
-
+.food-heading {width: fit-content; margin: auto; padding: 15px 30px; background: var(--secondary-color); border-radius: 20px; color: var(--white);}
+.food-gallery {
+    height: 550px;
+}
+.food-gallery .icon-holder {
+    background: var(--secondary-color);
+    padding: 20px;
+    width: 100px;
+    margin: auto;
+    border-radius: 50%;
+}
+.food-gallery .icon-holder img {
+    filter: invert(1);
+}
+.food-gallery .food-title {
+    margin: 20px 0 0 0;
+    transform: rotate(-15deg);
+    font-size: 40px;
+    color: var(--white);
+}
+.food-gallery .food-gallery-img {
+    transform: translateY(-50px);
+}
+.food-section .about-content {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+.food-section .about-content::before, 
+.food-section .about-content::after {
+    content: '';
+    position: absolute;
+}
+.food-section .about-content::before {
+    width: 95%;
+    height: 50%;
+    background: url(../images/stores/bg-texture.png) repeat center / contain;
+    top: 45px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: -2;
+    border-radius: 20px;
+}
+.food-section .about-content::after {
+    width: 100%;
+    height: 60%;
+    bottom: 0;
+    left: 0;
+    border-radius: 20px;
+    border: 2px solid var(--primary-color);
+    background: var(--white);
+    z-index: -1;
+}
+.about-content .food-row {
+    width: 90%;
+    margin: auto;
+}
+.about-content .para-container {
+    padding: 0 50px 50px;
+}
+.about-content .para-container em {
+    color: var(--secondary-color);
+    font-weight: 900;
+}
 .did-sec{width: calc(100% - 200px);margin: 0 auto;position: relative;padding:0 0 75px 0;}
 .you-sec{background: var(--primary-color);position: relative;padding: 20px;overflow: hidden;}
 .you-sec:before{position: absolute;content: "";width: 100%;height: 100%;left:0;top:0; background: url(../images/franchise/texture.jpg)repeat;mix-blend-mode: multiply;}
