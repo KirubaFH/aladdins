@@ -23,7 +23,7 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     /* contact us */
     .cont-list {padding: 50px;}
     .cont-ico img {width: 70px;}
-    .cont-det span,.cont-det p{font-size: 28px;}
+    .cont-det span,.cont-det p{font-size: 25px;}
     /* events */
     .kitchen-sec{padding:50px 0 0 0;}
     .kit-lft{margin-top: -120px;}
@@ -60,7 +60,10 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .franchise-hero-section .process-card-container .icon {width: 100px;}
     .franchise-hero-section .bg {height: 72.7%;}
     .search-content h2 {font-size: 60px;}
-    
+    /* allergens */
+    .indicates-row {gap: 10px;}
+    .indicates-row .allergen-indicates {padding: 0 15px 0 0;}
+    .indicates-row .allergen-indicates span {font-size: 16px;}    
 }
 @media (max-width: 1199px) {
     /* typo */
@@ -80,7 +83,7 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .cont-list {padding: 50px 30px;}
     .cont-ico{margin-bottom: 20px;}
     .cont-det span{font-size: 24px;}
-    .cont-det p{font-size: 24px;margin-top: 5px;}
+    .cont-det p{font-size: 20px;margin-top: 5px;}
     /* events */
     .kit-lft:after {width: 320px;height: 320px;}
     .kitchen-sec h3,.latest-news h3,.honor-tit h3{font-size: 44px;}
@@ -132,6 +135,11 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .search-content h2 {font-size: 50px;}
     .search-content p {font-size: 18px;}
     .search-section .search-content {padding: 25px;}
+    /* allergens */
+    .indicates-row {gap: 5px;}
+    .indicates-row .allergen-indicates {padding: 0 10px 0 0;}
+    .indicates-row .allergen-indicates span {font-size: 14px;}
+    .indicates-row .allergen-indicates .main-icon {font-size: 14px;}
 
 
 
@@ -173,7 +181,7 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     #footer .social-media-links .icon {width:35px;}
     /* contact us */
     .inner-ban {padding: 70px 0;}
-    .cont-list{row-gap: 50px;margin-top: -40px;}
+    .cont-list{row-gap: 50px;margin-top: -40px; padding: 50px 15px;}
     .cont-list > div:last-child{flex: 1 1 100% !important;max-width: 100%;}
     .cont-ico,.cont-det{text-align: center;}
     .cont-list > div:first-child{border-right: 2px solid var(--primary-color);}
@@ -247,6 +255,8 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     #fran-form .input-group .selectize-input {min-height: 50px !important;}
     .accord-btn .arrow-icon {font-size: 24px;}
     .accord-btn .accord-title {font-size: 30px;}
+    .input-group .info-icon-wrapper:hover .info-popup {top: -70px;}
+    .input-group .info-icon-wrapper {top: 8px;}
 
 
 }
@@ -309,8 +319,8 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .news-title h4 {margin-top: 20px;}
     .hero-news-section img.poster-3 {margin-top: 20px;}
     /* allergen */
-    .allergen-sec {padding: 0 0 50px 0;margin-top: -30px;}
-    .gallery-buttons { flex-direction: row; overflow-x: auto; padding: 15px; gap: 10px; }
+    .allergen-sec {padding: 0 0 0 0;margin-top: -30px;}
+    .gallery-buttons { flex-direction: row; overflow-x: auto; padding: 0 15px; gap: 10px; }
     .gallery-btn { flex-direction: column; min-width: fit-content; gap: 8px; padding: 10px; }
     .gallery-btn:hover,
     .gallery-btn.active {transform: translateX(0) translateY(0); animation: none;}
@@ -322,6 +332,8 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .allergy-ul li {font-size: 15px;}
     .allergy-title {font-size: 22px;}
     .allergy-subtitle {font-size: 18px;}
+    .indicates-row {gap: 0; column-gap: 50px; flex-wrap: wrap; justify-content: center;}
+    .indicates-row .allergen-indicates {padding: 0;}
     /* stores */
     .alla-loc {height: 100%;}
     .alla-map {flex: 0 1 150px;}
@@ -343,7 +355,7 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .franchise-hero-section .bg {height: 65.7%;}
     .franchise-hero-section .content-wrapper {width: 100%;}
     .cont-form {padding: 25px;}
-    #fran-form .input-group input {font-size: 15px; padding: 10px;}
+    #fran-form .input-group input {font-size: 12px; padding: 10px;}
     .search-content p {font-size: 16px;}
     .franchise-hero-section .process-card .process-para.para-3 {padding: 0 50px 0 0;}
     .franchise-hero-section .process-card .process-para.para-4 {padding: 0 0 0 50px;}
@@ -351,6 +363,8 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     #fran-form .input-group .selectize-input:not(.has-items)::before {left: 10px !important;}
     #fran-form {row-gap: 15px;}
     .accord-btn .accord-title {font-size: 24px;}
+    .input-group .info-icon-wrapper {right: 5px;top: 6px;}
+    .input-group .info-icon-wrapper .info-icon {font-size: 20px;}
 
     .no-sm-gutters {
         margin-right: 0;
@@ -381,7 +395,7 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .cont-det p{margin-top: 2px;font-size: 18px;}
     /* homepage */
     .home-hero-content .logo {width: 250px;}
-    .input-group {max-width: 300px;}
+    .input-group {max-width: 400px;}
     .home-hero-content .order-btn {padding: 4px 8px; font-size: 14px;}
     .gallery-wrapper {height: 300px;}
     .home-banner-section .banner-wrapper {height: 250px; width: 95%;}

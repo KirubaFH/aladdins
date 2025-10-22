@@ -90,7 +90,7 @@ const city = document.getElementById("city-input");
 const email = document.getElementById("email-input");
 const phone = document.getElementById("phone-input");
 const occupation = document.getElementById("occupation-input");
-const locationField = document.getElementById("locationSets");
+const locationField = document.getElementById("location-input");
 const investment = document.getElementById("invest-input");
 const submitBtn = document.getElementById("submitBtn");
 
@@ -111,7 +111,7 @@ function validateInputs() {
     const emailVal = email.value.trim();
     const phoneVal = phone.value.trim();
     const occupationVal = occupation.value.trim();
-    const locationVal = getSelectedLocations();
+    const locationVal = locationField.value.trim();
     const investmentVal = investment.value.trim();
     let success = true;
 
@@ -200,7 +200,7 @@ function validateInputs() {
     // Location (Multi-select validation)
     if (locationVal.length === 0) {
         success = false;
-        setError(locationField, 'Please select at least one location*');
+        setError(locationField, 'More than one location is required*');
     } else {
         setSuccess(locationField);
     }
@@ -217,22 +217,6 @@ function validateInputs() {
     }
 
     return success;
-}
-
-// Helper function to get selected locations (works with both native select and Selectize)
-function getSelectedLocations() {
-    // Check if Selectize is being used
-    if (locationField.selectize) {
-        return locationField.selectize.getValue();
-    } else {
-        // Native multi-select
-        const selectedOptions = locationField.selectedOptions;
-        const selectedValues = [];
-        for (let i = 0; i < selectedOptions.length; i++) {
-            selectedValues.push(selectedOptions[i].value);
-        }
-        return selectedValues;
-    }
 }
 
 function setError(element, message) {

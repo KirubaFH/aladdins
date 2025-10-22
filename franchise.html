@@ -275,11 +275,11 @@
                                 <span class="error-msg"></span>
                             </div>
                             <div class="input-group">
-                                <input type="text" name="lastName" class="data-input" id="lastName-input" placeholder="Last Name*" onfocus="this.dataset.placeholder=this.placeholder;this.placeholder='';" onblur="this.placeholder=this.dataset.placeholder">
+                                <input type="text" name="lastName" class="data-input" id="lastName-input" placeholder="Last Name" onfocus="this.dataset.placeholder=this.placeholder;this.placeholder='';" onblur="this.placeholder=this.dataset.placeholder">
                                 <span class="error-msg"></span>
                             </div>
                             <div class="input-group">
-                                <input type="text" name="address" class="data-input" id="address-input" placeholder="Address*" onfocus="this.dataset.placeholder=this.placeholder;this.placeholder='';" onblur="this.placeholder=this.dataset.placeholder">
+                                <input type="text" name="address" class="data-input" id="address-input" placeholder="Address" onfocus="this.dataset.placeholder=this.placeholder;this.placeholder='';" onblur="this.placeholder=this.dataset.placeholder">
                                 <span class="error-msg"></span>
                             </div>
                             <div class="input-group">
@@ -303,23 +303,25 @@
                                 <span class="error-msg"></span>
                             </div>
                             <div class="input-group">
-                                <!-- <input type="text" name="location" class="data-input" id="location-input" placeholder="Preferred Location*" onfocus="this.dataset.placeholder=this.placeholder;this.placeholder='';" onblur="this.placeholder=this.dataset.placeholder"> -->
-                                <select class="data-input" name="locationSets" id="locationSets" multiple="multiple" placeholder="Preferred Location*"  placeholder="Current Occupation*" onfocus="this.dataset.placeholder=this.placeholder;this.placeholder='';" onblur="this.placeholder=this.dataset.placeholder">
-                                    <option value="Rugeley">Rugeley</option>
-                                    <option value="Brownhills">Brownhills</option>
-                                    <option value="Cannock">Cannock</option>
-                                    <option value="Halesowen">Halesowen</option>
-                                    <option value="Kitt's Green">Kitt's Green</option>
-                                    <option value="Upper Gornal">Upper Gornal</option>
-                                    <option value="Wednesbury">Wednesbury</option>
-                                    <option value="Willenhall">Willenhall</option>
-                                    <option value="Wolverhampton">Wolverhampton</option>
-                                    <option value="Great Barr">Great Barr</option>
-                                </select>
+                                <input type="text" name="location" class="data-input" id="location-input" placeholder="Preferred Location*" onfocus="this.dataset.placeholder=this.placeholder;this.placeholder='';" onblur="this.placeholder=this.dataset.placeholder">
+                                <div class="info-icon-wrapper">
+                                    <i class="ri-information-2-line info-icon"></i>
+                                    <div class="info-popup">
+                                        <p>Please select more than one location if you have your preferred location</p>
+                                        <div class="popup-arrow"></div>
+                                    </div>
+                                </div>
                                 <span class="error-msg"></span>
                             </div>
                             <div class="input-group">
                                 <input type="text" name="investment" class="data-input" id="invest-input" placeholder="Investment Amount*" onfocus="this.dataset.placeholder=this.placeholder;this.placeholder='';" onblur="this.placeholder=this.dataset.placeholder">
+                                <div class="info-icon-wrapper">
+                                    <i class="ri-information-2-line info-icon"></i>
+                                    <div class="info-popup">
+                                        <p>Minimum investment: £10,000<br>Maximum investment: £500,000</p>
+                                        <div class="popup-arrow"></div>
+                                    </div>
+                                </div>
                                 <span class="error-msg"></span>
                             </div>
                             <button type="submit" class="submit-btn" id="submitBtn">Submit</button>
