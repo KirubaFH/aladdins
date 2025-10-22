@@ -83,12 +83,12 @@ window.addEventListener("resize", adjustHeroHeight);
 // franchise form with Selectize support
 const form = document.getElementById("fran-form");
 const firstName = document.getElementById("firstName-input");
-const lastName = document.getElementById("lastName-input");
-const address = document.getElementById("address-input");
+// const lastName = document.getElementById("lastName-input");
+// const address = document.getElementById("address-input");
 const postcode = document.getElementById("postcode-input");
 const city = document.getElementById("city-input");
 const email = document.getElementById("email-input");
-const phone = document.getElementById("phone-input");
+// const phone = document.getElementById("phone-input");
 const occupation = document.getElementById("occupation-input");
 const locationField = document.getElementById("location-input");
 const investment = document.getElementById("invest-input");
@@ -104,12 +104,12 @@ if (form) {
 
 function validateInputs() {
     const firstNameVal = firstName.value.trim();
-    const lastNameVal = lastName.value.trim();
-    const addressVal = address.value.trim();
+    // const lastNameVal = lastName.value.trim();
+    // const addressVal = address.value.trim();
     const postcodeVal = postcode.value.trim();
     const cityVal = city.value.trim();
     const emailVal = email.value.trim();
-    const phoneVal = phone.value.trim();
+    // const phoneVal = phone.value.trim();
     const occupationVal = occupation.value.trim();
     const locationVal = locationField.value.trim();
     const investmentVal = investment.value.trim();
@@ -127,23 +127,23 @@ function validateInputs() {
     }
 
     // Last Name
-    if (lastNameVal === '') {
-        success = false;
-        setError(lastName, 'Please enter your last name*');
-    } else if (/\d/.test(lastNameVal)) {
-        success = false;
-        setError(lastName, 'Last name cannot contain numbers*');
-    } else {
-        setSuccess(lastName);
-    }
+    // if (lastNameVal === '') {
+    //     success = false;
+    //     setError(lastName, 'Please enter your last name*');
+    // } else if (/\d/.test(lastNameVal)) {
+    //     success = false;
+    //     setError(lastName, 'Last name cannot contain numbers*');
+    // } else {
+    //     setSuccess(lastName);
+    // }
 
     // Address
-    if (addressVal === '') {
-        success = false;
-        setError(address, 'Please enter your address*');
-    } else {
-        setSuccess(address);
-    }
+    // if (addressVal === '') {
+    //     success = false;
+    //     setError(address, 'Please enter your address*');
+    // } else {
+    //     setSuccess(address);
+    // }
 
     // Postcode
     if (postcodeVal === '') {
@@ -179,15 +179,15 @@ function validateInputs() {
     }
 
     // Phone
-    if (phoneVal === '') {
-        success = false;
-        setError(phone, 'Please enter your phone number*');
-    } else if (!/^[0-9]{7,15}$/.test(phoneVal)) {
-        success = false;
-        setError(phone, 'Please enter a valid phone number*');
-    } else {
-        setSuccess(phone);
-    }
+    // if (phoneVal === '') {
+    //     success = false;
+    //     setError(phone, 'Please enter your phone number*');
+    // } else if (!/^[0-9]{7,15}$/.test(phoneVal)) {
+    //     success = false;
+    //     setError(phone, 'Please enter a valid phone number*');
+    // } else {
+    //     setSuccess(phone);
+    // }
 
     // Occupation
     if (occupationVal === '') {

@@ -207,15 +207,15 @@ header.hide {transform:translateY(-100%);}
 .cont-form{background: var(--white); text-align: center;max-width: 1240px;padding: 65px 70px;border-radius: 12px;margin: 0 auto;}
 #fran-form{display: flex;flex-wrap: wrap;column-gap: 5%;row-gap: 30px;}
 #fran-form .input-group{flex:0 1 47.5%;width: 47.5%;padding: 0;margin: 0;}
-#fran-form .submit-btn{flex: 0 1 calc(100% - 40px); padding: 15px;background: var(--primary-color);color: var(--white);transition: all 0.5s ease;font-family: "open sans";font-weight: 300;font-size: 20px;border-radius: 10px;margin: 0 auto;}
+#fran-form .submit-btn{flex: 0 1 calc(100% - 40px); padding: 15px;background: var(--primary-color);color: var(--white);transition: all 0.5s ease;font-family: "open sans";font-weight: 300;font-size: 20px;border-radius: 10px;margin: 0 auto; cursor: pointer;}
 #fran-form .submit-btn:hover{background: var(--secondary-color);}
-#fran-form .input-group input{border:1px solid #000 !important;width: 100%;padding:15px;font-family: "open sans";font-size: 20px; border-radius: 5px;}
+#fran-form .input-group input{border:1px solid #000 !important;width: 100%;padding:15px;font-family: "open sans";font-size: 20px; border-radius: 5px;height: 100%;max-height: 60px;}
 span.error-msg{display: block; width:100%; text-align: left;color: var(--secondary-color);font-family: "open sans";font-size: 16px;}
 .input-group .info-icon-wrapper {position: absolute; top: 12px; right: 10px; bottom: 0; margin: auto;}
 .input-group .info-icon-wrapper .info-icon {font-size: 26px;opacity: 0.5;cursor: pointer;transition: 0.5s;}
 .input-group .info-icon-wrapper .info-icon:hover {opacity: 1;}
-.input-group .info-icon-wrapper .info-popup {position: absolute; background: #fff; width: 280px; padding: 10px; border-radius: 10px; top: -30px; left: -130px; box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.5);transform: scale(0);z-index: 10;}
-.input-group .info-icon-wrapper:hover .info-popup {transform: scale(1); top: -80px; left: -240px;transition: 0.2s;}
+.input-group .info-icon-wrapper .info-popup {position: absolute; background: #fff; width: 280px; padding: 10px; border-radius: 10px; bottom: 0; left: -130px; box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.5);transform: scale(0);z-index: 10;}
+.input-group .info-icon-wrapper:hover .info-popup {transform: scale(1); bottom: 50px; left: -240px;transition: 0.2s;}
 .input-group .info-icon-wrapper .info-popup p {margin: 0; font-size: 14px;}
 
 /* Allergen */

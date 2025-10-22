@@ -247,7 +247,7 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .franchise-hero-section .process-card-container .process-para {margin-bottom: 15px; font-size: 14px;}
     .franchise-hero-section .process-card-container .icon {width: 65px;}
     .franchise-hero-section .bg {height: 72.4%;}
-    #fran-form .input-group input {font-size: 15px;}
+    #fran-form .input-group input {font-size: 15px;max-height: 50px;}
     span.error-msg {font-size: 12px;}
     .search-content h2 {font-size: 46px;}
     .franchise-hero-section .process-card .process-para.para-3, .franchise-hero-section .process-card .process-para.para-4 {padding: 0;}
@@ -255,8 +255,8 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     #fran-form .input-group .selectize-input {min-height: 50px !important;}
     .accord-btn .arrow-icon {font-size: 24px;}
     .accord-btn .accord-title {font-size: 30px;}
-    .input-group .info-icon-wrapper:hover .info-popup {top: -70px;}
     .input-group .info-icon-wrapper {top: 8px;}
+    .input-group .info-icon-wrapper:hover .info-popup { bottom: 40px;}
 
 
 }
@@ -424,7 +424,7 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     /* franchise */
     #fran-form {flex-direction: column;}
     #fran-form .input-group {width: 100%; margin: auto;}
-    #fran-form .submit-btn {padding: 10px 30px;}
+    #fran-form .submit-btn {padding: 10px 30px;font-size: 16px;}
     .search-content h2 {font-size: 32px;}
     .search-content h2  br {display: none;}
     .franchise-hero-section .chef {display: none;}
