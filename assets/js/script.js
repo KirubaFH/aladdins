@@ -220,7 +220,7 @@ function validateInputs() {
     // Validate Checkboxes
     if (!gdprCheckbox.checked) {
         success = false;
-        setCheckboxError(gdprCheckbox, 'You must agree to the terms and conditions*');
+        setCheckboxError(gdprCheckbox, 'Please acknowledge our data usage policy*');
     } else {
         setCheckboxSuccess(gdprCheckbox);
     }

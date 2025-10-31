@@ -377,6 +377,7 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .accord-btn .accord-title {font-size: 24px;}
     .input-group .info-icon-wrapper {right: 5px;top: 6px;}
     .input-group .info-icon-wrapper .info-icon {font-size: 20px;}
+    .checkbox-input-group .checkbox-label {font-size: 12px;}
 
     .no-sm-gutters {
         margin-right: 0;
@@ -407,7 +408,8 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .cont-det p{margin-top: 2px;font-size: 18px;}
     /* homepage */
     .home-hero-content .logo {width: 250px;}
-    .input-group {max-width: 310px;}
+    .input-group {max-width: 360px;}
+    .checkbox {max-width: 360px; margin: auto;}
     .home-hero-content .order-btn {padding: 4px 8px; font-size: 14px;}
     .gallery-wrapper {height: 300px;}
     .home-banner-section .banner-wrapper {height: 250px; width: 95%;}
