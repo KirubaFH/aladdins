@@ -159,6 +159,20 @@ header.hide {transform:translateY(-100%);}
 .news-card .date-box span {display: block; font-size: 28px; color: var(--white);}
 .news-card .date-box .date-span {padding: 10px; box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.7);}
 .news-card .date-box .month-span {font-size: 12px; text-transform: uppercase;letter-spacing: 4px; font-family: 'Open Sans'; font-weight: 600; padding: 5px;}
+.journey-section {background: var(--primary-color);}
+.journey-content {display: flex; align-items: center; position: relative; z-index: 0; gap: 20px;}
+.journey-content::before {content: ''; position: absolute; width: 90%; height: 90%; border-radius: 10px; border: 2px solid var(--white); background: var(--white); top: 0; bottom: 0; right: 0; margin: auto; z-index: -1;}
+.journey-content.journey-inverted-content::before {background: var(--primary-color);}
+.journey-content .journey-year { width: 130px; height: 130px; background: var(--primary-color); display: flex; align-items: center; justify-content: center; border: 2px solid var(--white); border-radius: 50%; }
+.journey-content.journey-inverted-content .journey-year {background: var(--white);}
+.journey-content .journey-year h6 { color: var(--white); font-size: 26px;}
+.journey-content.journey-inverted-content .journey-year h6 {color: var(--primary-color);}
+.journey-content .journey-para {width: calc(100% - 150px);}
+.journey-content .journey-para p {font-size: 16px; margin: 0; color: var(--primary-color);padding: 0 5px 0 0;}
+.journey-content.journey-inverted-content .journey-para p {color: var(--white);}
+.mid-content h6 {color: var(--white); font-size: 26px;}
+.mid-content span {font-family:'Bungee'; color: var(--secondary-color); font-size: 56px;line-height: 1;}
+
 
 /* franchise page */
 .franchise-hero-section {overflow: visible;}
@@ -217,6 +231,8 @@ span.error-msg{display: block; width:100%; text-align: left;color: var(--seconda
 .input-group .info-icon-wrapper .info-popup {position: absolute; background: #fff; width: 280px; padding: 10px; border-radius: 10px; bottom: 0; left: -130px; box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.5);transform: scale(0);z-index: 10;}
 .input-group .info-icon-wrapper:hover .info-popup {transform: scale(1); bottom: 50px; left: -240px;transition: 0.2s;}
 .input-group .info-icon-wrapper .info-popup p {margin: 0; font-size: 14px;}
+.checkbox-input-group {display: flex; align-items: center; justify-content: center; gap: 5px;}
+.checkbox-input-group .checkbox-label {font-family:'Open Sans';font-size: 18px;cursor: pointer; margin: 0; line-height: 1;}
 
 /* Allergen */
 .allergen-sec{padding: 0 0 25px 0;margin-top: -50px;position: relative;}

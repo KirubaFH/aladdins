@@ -30,6 +30,8 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .kitchen-sec h3,.latest-news h3,.honor-tit h3{font-size: 48px;}
     .kit-main p ,.honor-cnt p{font-size: 21px;}
     .awards-slides .owl-item img {height: 450px; object-fit: cover;}
+    .journey-content .journey-year {width: 110px; height: 110px;}
+    .journey-content .journey-para p {font-size: 14px;}
     /* homepage */
     .home-banner-section .banner-wrapper {height: 500px; border-radius: 0 50px 50px 0;}
     .home-banner-section .banner-wrapper::after {border-radius: 50px;}
@@ -92,6 +94,14 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .news-card img {height: 220px;}
     .news-card h4 {font-size: 22px;}
     .news-card p {font-size: 16px;}
+    .mid-content h6 {font-size: 22px;}
+    .mid-content span {font-size: 48px;}
+    .journey-content .journey-year {width: 100px; height: 100px;}
+    .journey-content .journey-year h6 {font-size: 20px;}
+    .journey-content .journey-para {width: calc(100% - 110px);}
+    .journey-content .journey-para p {font-size: 12px;}
+    .journey-content::before {height: 96%;}
+    .journey-content {gap: 10px;}
     /* .owl-carousel {width: 90%; margin: auto;} */
     .awards-slides .owl-item img {height: 330px;}
     /* homepage */
@@ -218,6 +228,7 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .honor-wall:before{max-height: 240px;border-radius: 20px;width: calc(100% - 20px);}
     .award {padding-top: 20px;}
     .awards-slides .owl-item img {height: 270px;}
+    .journey-content-paras p {font-size: 17px;}
 
 
     /* allergens */
@@ -304,6 +315,7 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .kitchen-sec h3 br{display: none;}
     .awards-slides .owl-item img {height: 180px;}
     .awards-slides .owl-nav button {width: 30px;height: 30px;font-size: 22px !important;}
+    .journey-section h3 br {display: none;}
     /* homepage */
     .home-wait-section .wait-content-wrapper .wait-title-wrapper {margin: 0 0 30px 0;}
     .home-wait-section .wait-content-wrapper .wait-title-wrapper h3 {text-align: center; transform: scale(1.1) translateX(0px);}
@@ -395,7 +407,7 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .cont-det p{margin-top: 2px;font-size: 18px;}
     /* homepage */
     .home-hero-content .logo {width: 250px;}
-    .input-group {max-width: 400px;}
+    .input-group {max-width: 310px;}
     .home-hero-content .order-btn {padding: 4px 8px; font-size: 14px;}
     .gallery-wrapper {height: 300px;}
     .home-banner-section .banner-wrapper {height: 250px; width: 95%;}
@@ -410,6 +422,7 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .awards-slides .owl-item img {height: 160px;} 
     .awards-slides .owl-nav .owl-next {right: -10px;}
     .awards-slides .owl-nav .owl-prev {left: -10px;}
+    .journey-content-paras p {font-size: 15px;}
     /* allergens */
     .aller-img {border-radius: 25px;}
     /* stores */

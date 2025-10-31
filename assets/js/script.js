@@ -93,6 +93,7 @@ const occupation = document.getElementById("occupation-input");
 const locationField = document.getElementById("location-input");
 const investment = document.getElementById("invest-input");
 const submitBtn = document.getElementById("submitBtn");
+const gdprCheckbox = document.getElementById("gdbr-checkbox");
 
 if (form) {
     form.addEventListener('submit', (e) => {
@@ -216,6 +217,14 @@ function validateInputs() {
         setSuccess(investment);
     }
 
+    // Validate Checkboxes
+    if (!gdprCheckbox.checked) {
+        success = false;
+        setCheckboxError(gdprCheckbox, 'You must agree to the terms and conditions*');
+    } else {
+        setCheckboxSuccess(gdprCheckbox);
+    }
+
     return success;
 }
 
@@ -269,6 +278,35 @@ function setSuccess(element) {
             });
         }
     }
+}
+
+// setError for checkbox - FIXED
+function setCheckboxError(checkbox, message) {
+    const checkboxGroup = checkbox.closest('.checkbox');
+    let errorElement = checkboxGroup.querySelector('.error-msg');
+    
+    // Create error message element if it doesn't exist
+    // if (!errorElement) {
+    //     errorElement = document.createElement('span');
+    //     errorElement.className = 'error-msg';
+    //     checkboxGroup.appendChild(errorElement);
+    // }
+    
+    errorElement.innerText = message;
+    checkboxGroup.classList.add('error');
+    checkboxGroup.classList.remove('success');
+}
+
+// setSuccess for checkbox - FIXED
+function setCheckboxSuccess(checkbox) {
+    const checkboxGroup = checkbox.closest('.checkbox');
+    const errorElement = checkboxGroup.querySelector('.error-msg');
+    
+    if (errorElement) {
+        errorElement.innerText = '';
+    }
+    checkboxGroup.classList.add('success');
+    checkboxGroup.classList.remove('error');
 }
 // Email validattion
 const validateEmail = (email) => {
