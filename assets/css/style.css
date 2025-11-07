@@ -245,7 +245,7 @@ span.error-msg{display: block; width:100%; text-align: left;color: var(--seconda
 .gallery-btn{display:flex;align-items:center;gap:15px;padding:18px 20px;border:none;border-radius:0;background:#fff;color:#333;font-weight:600;font-size:16px;cursor:pointer;transition:.3s; border-radius: 4px;border-bottom: 1px solid #f0f0f0;}
 .gallery-btn:last-child { border-bottom: none; }
 .gallery-btn:hover{transform: translateX(10px);background: #f8f9fa;}
-.gallery-btn.active{background:linear-gradient(135deg,var(--primary-color),var(--secondary-color));color:#fff;transform:translateX(0);}
+.gallery-btn.active{background:linear-gradient(135deg,var(--primary-color),var(--primary-color));color:#fff;transform:translateX(0);}
 .gallery-btn.active::before{display:none;}
 .btn-icon{font-size:24px;z-index:2;position:relative;}
 .btn-text{z-index:2;position:relative;}
