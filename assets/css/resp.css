@@ -452,12 +452,14 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     #fran-form .input-group .selectize-dropdown .option {padding: 6px 12px !important; font-size: 14px !important;}
     .accord-btn .accord-title {font-size: 20px;}
     .accord-btn .arrow-icon { font-size: 20px; }
+    a.lightbox-btn {padding: 6px 14px;color: var(--primary-color);font-size: 16px;}
 }
 
 @media (max-width: 425px) {
     .home-app-section .home-app-wrapper {width: 100%; max-width: 400px;}
     .food-section .about-content::after {height: 43%;}
     .awards-slides .owl-item img {height: 130px;} 
+    a.lightbox-btn {padding: 5px 14px;color: var(--primary-color);border-radius: 6px;font-size: 14px;}
 }
 
 @media (max-width: 360px) {
