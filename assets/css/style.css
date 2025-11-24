@@ -686,6 +686,7 @@ button.contact-btn {
     cursor: pointer;
     transition: all 0.3s ease;
 }
+
 button.contact-btn:hover {
     background: #1e2652;
 }
