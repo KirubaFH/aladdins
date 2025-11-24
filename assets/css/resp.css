@@ -559,6 +559,10 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
 }
 @media (max-width: 575px) {
 
+    .news-card h4, h4 span {
+        font-size: 14px;
+    }
+
     /* typo */
     h1 {font-size:40px;}
     h3 {font-size:36px;}
