@@ -45,3 +45,145 @@ document.addEventListener("DOMContentLoaded", function() {
     updateBranchStatus();
     setInterval(updateBranchStatus, 30000);
 });
+
+// Opening Hours 
+document.addEventListener("DOMContentLoaded", function () {
+
+    function getUKDate() {
+        const formatter = new Intl.DateTimeFormat("en-GB", {
+            timeZone: "Europe/London",
+            hour: "numeric",
+            minute: "numeric",
+            second: "numeric",
+            year: "numeric",
+            month: "numeric",
+            day: "numeric"
+        });
+
+        const parts = formatter.formatToParts(new Date());
+        const lookup = Object.fromEntries(parts.map(p => [p.type, p.value]));
+
+        // Construct clean ISO date string
+        return new Date(
+            `${lookup.year}-${lookup.month}-${lookup.day}T${lookup.hour}:${lookup.minute}:${lookup.second}`
+        );
+    }
+
+    const ukNow = getUKDate();
+    const today = ukNow.getDay();   // ALWAYS correct now
+    console.log("Detected UK Time:", ukNow.toString());
+  const storeTimings = {
+    rugeley: {
+      0: { day: 'Sun', hours: '12:00 PM - 03:00 AM' },
+      1: { day: 'Mon', hours: '12:00 PM - 03:00 AM' },
+      2: { day: 'Tue', hours: '12:00 PM - 03:00 AM' },
+      3: { day: 'Wed', hours: '12:00 PM - 03:00 AM' },
+      4: { day: 'Thu', hours: '12:00 PM - 03:00 AM' },
+      5: { day: 'Fri', hours: '12:00 PM - 03:00 AM' },
+      6: { day: 'Sat', hours: '12:00 PM - 03:00 AM' }
+    },
+    brownhills: {
+      0: { day: 'Sun', hours: '12:00 PM - 03:00 AM' },
+      1: { day: 'Mon', hours: '12:00 PM - 03:00 AM' },
+      2: { day: 'Tue', hours: '12:00 PM - 03:00 AM' },
+      3: { day: 'Wed', hours: '12:00 PM - 03:00 AM' },
+      4: { day: 'Thu', hours: '12:00 PM - 03:00 AM' },
+      5: { day: 'Fri', hours: '12:00 PM - 03:00 AM' },
+      6: { day: 'Sat', hours: '12:00 PM - 03:00 AM' }
+    },
+    cannock: {
+      0: { day: 'Sun', hours: '12:00 PM - 03:00 AM' },
+      1: { day: 'Mon', hours: '12:00 PM - 03:00 AM' },
+      2: { day: 'Tue', hours: '12:00 PM - 03:00 AM' },
+      3: { day: 'Wed', hours: '12:00 PM - 03:00 AM' },
+      4: { day: 'Thu', hours: '12:00 PM - 03:00 AM' },
+      5: { day: 'Fri', hours: '12:00 PM - 03:00 AM' },
+      6: { day: 'Sat', hours: '12:00 PM - 03:00 AM' }
+    },
+    halesowen: {
+      0: { day: 'Sun', hours: '12:00 PM - 03:00 AM' },
+      1: { day: 'Mon', hours: '12:00 PM - 03:00 AM' },
+      2: { day: 'Tue', hours: '12:00 PM - 03:00 AM' },
+      3: { day: 'Wed', hours: '12:00 PM - 03:00 AM' },
+      4: { day: 'Thu', hours: '12:00 PM - 03:00 AM' },
+      5: { day: 'Fri', hours: '12:00 PM - 03:00 AM' },
+      6: { day: 'Sat', hours: '12:00 PM - 03:00 AM' }
+    },
+    kittsgreen: {
+      0: { day: 'Sun', hours: '12:00 PM - 03:00 AM' },
+      1: { day: 'Mon', hours: '12:00 PM - 03:00 AM' },
+      2: { day: 'Tue', hours: '12:00 PM - 03:00 AM' },
+      3: { day: 'Wed', hours: '12:00 PM - 03:00 AM' },
+      4: { day: 'Thu', hours: '12:00 PM - 03:00 AM' },
+      5: { day: 'Fri', hours: '12:00 PM - 03:00 AM' },
+      6: { day: 'Sat', hours: '12:00 PM - 03:00 AM' }
+    },
+    uppergornal: {
+      0: { day: 'Sun', hours: '12:00 PM - 12:00 AM' },
+      1: { day: 'Mon', hours: '12:00 PM - 12:00 AM' },
+      2: { day: 'Tue', hours: '12:00 PM - 12:00 AM' },
+      3: { day: 'Wed', hours: '12:00 PM - 12:00 AM' },
+      4: { day: 'Thu', hours: '12:00 PM - 12:00 AM' },
+      5: { day: 'Fri', hours: '12:00 PM - 12:00 AM' },
+      6: { day: 'Sat', hours: '12:00 PM - 12:00 AM' }
+    },
+    wednesbury: {
+      0: { day: 'Sun', hours: '03:00 AM - 03:00 PM' },
+      1: { day: 'Mon', hours: '03:00 AM - 03:00 PM' },
+      2: { day: 'Tue', hours: '03:00 AM - 03:00 PM' },
+      3: { day: 'Wed', hours: '03:00 AM - 03:00 PM' },
+      4: { day: 'Thu', hours: '03:00 AM - 03:00 PM' },
+      5: { day: 'Fri', hours: '03:00 AM - 03:00 PM' },
+      6: { day: 'Sat', hours: '03:00 AM - 03:00 PM' }
+    },
+    willenhall: {
+      0: { day: 'Sun', hours: '03:00 AM - 03:00 PM' },
+      1: { day: 'Mon', hours: '03:00 AM - 03:00 PM' },
+      2: { day: 'Tue', hours: '03:00 AM - 03:00 PM' },
+      3: { day: 'Wed', hours: '03:00 AM - 03:00 PM' },
+      4: { day: 'Thu', hours: '03:00 AM - 03:00 PM' },
+      5: { day: 'Fri', hours: '03:00 AM - 03:00 PM' },
+      6: { day: 'Sat', hours: '03:00 AM - 03:00 PM' }
+    },
+    wolverhampton: {
+      0: { day: 'Sun', hours: '03:00 AM - 03:00 PM' },
+      1: { day: 'Mon', hours: '03:00 AM - 03:00 PM' },
+      2: { day: 'Tue', hours: '03:00 AM - 03:00 PM' },
+      3: { day: 'Wed', hours: '03:00 AM - 03:00 PM' },
+      4: { day: 'Thu', hours: '03:00 AM - 03:00 PM' },
+      5: { day: 'Fri', hours: '03:00 AM - 03:00 PM' },
+      6: { day: 'Sat', hours: '03:00 AM - 03:00 PM' }
+    },
+    greatbarr: {
+      0: { day: 'Sun', hours: '03:01 AM - 03:01 PM' },
+      1: { day: 'Mon', hours: '03:01 AM - 03:01 PM' },
+      2: { day: 'Tue', hours: '03:01 AM - 03:01 PM' },
+      3: { day: 'Wed', hours: '03:01 AM - 03:01 PM' },
+      4: { day: 'Thu', hours: '03:01 AM - 03:01 PM' },
+      5: { day: 'Fri', hours: '03:01 AM - 03:01 PM' },
+      6: { day: 'Sat', hours: '03:01 AM - 03:01 PM' }
+    }
+  };
+
+function formatTiming(t) {
+        if (!t) return '<span class="store-time">No hours available</span>';
+        return `<span class="store-time">${t.day}: <b>${t.hours}</b></span>`;
+    }
+
+    document.querySelectorAll('.store').forEach(storeEl => {
+        const storeId = storeEl.getAttribute('data-store-id');
+        let hoursEl = storeEl.querySelector('.store-hours');
+
+        if (!hoursEl) {
+            hoursEl = document.createElement('div');
+            hoursEl.className = 'store-hours';
+            storeEl.appendChild(hoursEl);
+        }
+
+        const timings = storeTimings[storeId];
+        const dayTiming = timings ? timings[today] : null;
+
+        hoursEl.innerHTML = formatTiming(dayTiming);
+    });
+
+});

@@ -175,7 +175,7 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .about-content p {font-size: 18px;}
     .about-content .para-container em {font-size: 20px;}
     .food-gallery .icon-holder {width: 80px;padding: 15px;}
-    .indicator {top: -7px;width: 85px;height: 85px;margin-left: 0px;right: 0;position: relative;}
+    .indicator {top: -4px;width: 70px;height: 70px;margin-left: 0px;right: 0;position: relative;}
 
     /* franchise */
     .franchise-hero-section .content-wrapper {padding: 75px 50px;}

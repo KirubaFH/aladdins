@@ -526,7 +526,7 @@ section.journey-section-new span {
 .journey-timeline::before {
     content: '';
     position: absolute;
-    height: 85%;
+    height: 83%;
     top: -60px;
     bottom: -110px;
     width: 3px;
@@ -568,6 +568,9 @@ section.journey-section-new span {
     width: 45%;
     min-height: 100px;
     justify-content: center;
+}
+.journey-timeline .timeline-card.last {
+    margin-top: 20px;
 }
 .journey-timeline .timeline-card::before {
     content: '';
@@ -705,4 +708,11 @@ img.contact-img {
     font-size: 16px;
     font-family: 'Open Sans';
     max-width: fit-content;
+}
+.alla-cnt span.store-time {
+    font-family: 'Open Sans';
+    color: var(--white);
+    font-size: 16px;
+    display: block;
+    margin: 0px 0px 10px 0px;
 }
