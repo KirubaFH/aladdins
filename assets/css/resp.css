@@ -32,6 +32,7 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .awards-slides .owl-item img {height: 450px; object-fit: cover;}
     .journey-content .journey-year {width: 110px; height: 110px;}
     .journey-content .journey-para p {font-size: 14px;}
+    .honor-wall:before {top: 40%;}
     /* homepage */
     .home-banner-section .banner-wrapper {height: 500px; border-radius: 0 50px 50px 0;}
     .home-banner-section .banner-wrapper::after {border-radius: 50px;}
@@ -128,7 +129,7 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .cont-det p{font-size: 20px;margin-top: 5px;}
     /* events */
     .kit-lft:after {width: 320px;height: 320px;}
-    .kitchen-sec h3,.latest-news h3,.honor-tit h3{font-size: 44px;}
+    .kitchen-sec h3,.latest-news h3,.honor-tit h3{font-size: 42px;}
     .kit-main p ,.honor-cnt p{font-size: 19px;}
     .honor-wall:before{width:calc(100% - 50px);max-height: 280px;top:40%;transform: translate(-50% , -60%);}
     .news-card img {height: 220px;}
@@ -302,7 +303,7 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .kit-rht{margin-top: -30px;}
     .honor-wall{padding: 0 0 50px 0;}
     .honor-tit {padding: 0;}
-    .honor-wall:before{max-height: 240px;border-radius: 20px;width: calc(100% - 20px);}
+    .honor-wall:before{max-height: 240px;border-radius: 20px;width: calc(100% - 20px);top: 36%;}
     .award {padding-top: 20px;}
     .awards-slides .owl-item img {height: 270px;}
     .journey-content-paras p {font-size: 17px;}
