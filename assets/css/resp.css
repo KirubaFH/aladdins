@@ -648,7 +648,7 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
         font-size: 20px;
     }
     .card.form-card p.form-para {
-        font-size: 15px;
+        font-size: 14px;
     }
     button.contact-btn {
         padding: 8px 35px;
