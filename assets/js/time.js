@@ -10,7 +10,8 @@ document.addEventListener("DOMContentLoaded", function() {
         "wednesbury-branch": { open: 900, close: 180 },     // 15:00-3:00
         "willenhall-branch": { open: 900, close: 180 },     // 15:00-3:00
         "wolverhampton-branch": { open: 900, close: 180 },  // 15:00-3:00
-        "greatBarr-branch": { open: 901, close: 181 }       // 15:01-3:01
+        "greatBarr-branch": { open: 901, close: 181 },    // 15:01-3:01
+        "Tipton-branch": { open: 720, close: 180 }, 
     };
 
     function getUKTime() {
@@ -162,7 +163,16 @@ document.addEventListener("DOMContentLoaded", function () {
       4: { day: 'Thu', hours: '03:01 PM - 03:01 AM' },
       5: { day: 'Fri', hours: '03:01 PM - 03:01 AM' },
       6: { day: 'Sat', hours: '03:01 PM - 03:01 AM' }
-    }
+    },
+    Tipton: {
+      0: { day: 'Sun', hours: '12:00 PM - 03:00 AM' },
+      1: { day: 'Mon', hours: '12:00 PM - 03:00 AM' },
+      2: { day: 'Tue', hours: '12:00 PM - 03:00 AM' },
+      3: { day: 'Wed', hours: '12:00 PM - 03:00 AM' },
+      4: { day: 'Thu', hours: '12:00 PM - 03:00 AM' },
+      5: { day: 'Fri', hours: '12:00 PM - 03:00 AM' },
+      6: { day: 'Sat', hours: '12:00 PM - 03:00 AM' }
+    },
   };
 
 function formatTiming(t) {

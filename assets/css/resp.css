@@ -662,7 +662,7 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
 
 @media (max-width: 425px) {
     .home-app-section .home-app-wrapper {width: 100%; max-width: 400px;}
-    .food-section .about-content::after {height: 48%;}
+    .food-section .about-content::after {height: 44%;}
     .awards-slides .owl-item img {height: 130px;} 
     a.lightbox-btn {padding: 5px 14px;color: var(--primary-color);border-radius: 6px;font-size: 14px;}
     /* Journey */
@@ -682,6 +682,6 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
 }
 
 @media (max-width: 360px) {
-    .food-section .about-content::after {height: 54%;}
+    .food-section .about-content::after {height: 48%;}
     .awards-slides .owl-item img {height: 100px;} 
 }
