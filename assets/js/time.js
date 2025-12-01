@@ -128,40 +128,40 @@ document.addEventListener("DOMContentLoaded", function () {
       6: { day: 'Sat', hours: '12:00 PM - 12:00 AM' }
     },
     wednesbury: {
-      0: { day: 'Sun', hours: '03:00 AM - 03:00 PM' },
-      1: { day: 'Mon', hours: '03:00 AM - 03:00 PM' },
-      2: { day: 'Tue', hours: '03:00 AM - 03:00 PM' },
-      3: { day: 'Wed', hours: '03:00 AM - 03:00 PM' },
-      4: { day: 'Thu', hours: '03:00 AM - 03:00 PM' },
-      5: { day: 'Fri', hours: '03:00 AM - 03:00 PM' },
-      6: { day: 'Sat', hours: '03:00 AM - 03:00 PM' }
+      0: { day: 'Sun', hours: '03:00 PM - 03:00 AM' },
+      1: { day: 'Mon', hours: '03:00 PM - 03:00 AM' },
+      2: { day: 'Tue', hours: '03:00 PM - 03:00 AM' },
+      3: { day: 'Wed', hours: '03:00 PM - 03:00 AM' },
+      4: { day: 'Thu', hours: '03:00 PM - 03:00 AM' },
+      5: { day: 'Fri', hours: '03:00 PM - 03:00 AM' },
+      6: { day: 'Sat', hours: '03:00 PM - 03:00 AM' }
     },
     willenhall: {
-      0: { day: 'Sun', hours: '03:00 AM - 03:00 PM' },
-      1: { day: 'Mon', hours: '03:00 AM - 03:00 PM' },
-      2: { day: 'Tue', hours: '03:00 AM - 03:00 PM' },
-      3: { day: 'Wed', hours: '03:00 AM - 03:00 PM' },
-      4: { day: 'Thu', hours: '03:00 AM - 03:00 PM' },
-      5: { day: 'Fri', hours: '03:00 AM - 03:00 PM' },
-      6: { day: 'Sat', hours: '03:00 AM - 03:00 PM' }
+      0: { day: 'Sun', hours: '03:00 PM - 03:00 AM' },
+      1: { day: 'Mon', hours: '03:00 PM - 03:00 AM' },
+      2: { day: 'Tue', hours: '03:00 PM - 03:00 AM' },
+      3: { day: 'Wed', hours: '03:00 PM - 03:00 AM' },
+      4: { day: 'Thu', hours: '03:00 PM - 03:00 AM' },
+      5: { day: 'Fri', hours: '03:00 PM - 03:00 AM' },
+      6: { day: 'Sat', hours: '03:00 PM - 03:00 AM' }
     },
     wolverhampton: {
-      0: { day: 'Sun', hours: '03:00 AM - 03:00 PM' },
-      1: { day: 'Mon', hours: '03:00 AM - 03:00 PM' },
-      2: { day: 'Tue', hours: '03:00 AM - 03:00 PM' },
-      3: { day: 'Wed', hours: '03:00 AM - 03:00 PM' },
-      4: { day: 'Thu', hours: '03:00 AM - 03:00 PM' },
-      5: { day: 'Fri', hours: '03:00 AM - 03:00 PM' },
-      6: { day: 'Sat', hours: '03:00 AM - 03:00 PM' }
+      0: { day: 'Sun', hours: '03:00 PM - 03:00 AM' },
+      1: { day: 'Mon', hours: '03:00 PM - 03:00 AM' },
+      2: { day: 'Tue', hours: '03:00 PM - 03:00 AM' },
+      3: { day: 'Wed', hours: '03:00 PM - 03:00 AM' },
+      4: { day: 'Thu', hours: '03:00 PM - 03:00 AM' },
+      5: { day: 'Fri', hours: '03:00 PM - 03:00 AM' },
+      6: { day: 'Sat', hours: '03:00 PM - 03:00 AM' }
     },
     greatbarr: {
-      0: { day: 'Sun', hours: '03:01 AM - 03:01 PM' },
-      1: { day: 'Mon', hours: '03:01 AM - 03:01 PM' },
-      2: { day: 'Tue', hours: '03:01 AM - 03:01 PM' },
-      3: { day: 'Wed', hours: '03:01 AM - 03:01 PM' },
-      4: { day: 'Thu', hours: '03:01 AM - 03:01 PM' },
-      5: { day: 'Fri', hours: '03:01 AM - 03:01 PM' },
-      6: { day: 'Sat', hours: '03:01 AM - 03:01 PM' }
+      0: { day: 'Sun', hours: '03:01 PM - 03:01 AM' },
+      1: { day: 'Mon', hours: '03:01 PM - 03:01 AM' },
+      2: { day: 'Tue', hours: '03:01 PM - 03:01 AM' },
+      3: { day: 'Wed', hours: '03:01 PM - 03:01 AM' },
+      4: { day: 'Thu', hours: '03:01 PM - 03:01 AM' },
+      5: { day: 'Fri', hours: '03:01 PM - 03:01 AM' },
+      6: { day: 'Sat', hours: '03:01 PM - 03:01 AM' }
     }
   };
 
