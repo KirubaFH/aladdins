@@ -558,6 +558,7 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     section.form-section {
         padding-bottom: 0px;
     }
+    .main-content-column {padding: 20px 0px 0px 0px;}
 }
 @media (max-width: 575px) {
 
