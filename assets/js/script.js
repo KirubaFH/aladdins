@@ -1,11 +1,11 @@
 // Loader
-// const loader = document.getElementById("loader");
-// window.addEventListener("load", () => {
-//     setTimeout(() => {
-//         loader.classList.add("inactive");
-//         document.body.classList.add("loaded");
-//     }, 500)
-// });
+const loader = document.getElementById("loader");
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        loader.classList.add("inactive");
+        document.body.classList.add("loaded");
+    }, 500)
+});
 
 // Lazy Loading
 const images = document.querySelectorAll("img");
