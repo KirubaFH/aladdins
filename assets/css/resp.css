@@ -41,7 +41,7 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .home-app-section .app-content h2 {font-size: 75px;}
     .home-app-section::after {border-radius: 50px;}
     .gallery-wrapper {height: 300px;}
-    .gallery-wrapper .gallery-item-name {font-size: 16px;}
+    .gallery-wrapper .gallery-item-name {font-size: 13px;padding: 10px;}
     /* stores */
     .alla-loc{column-gap: 20px;}
     .alla-map {flex: 0 1 150px;}
@@ -153,7 +153,7 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .home-app-section .app-content h2 {font-size: 60px;}
     .home-app-section::after {border-radius: 50px;}
     .gallery-wrapper {height: 250px; border-radius: 20px;}
-    .gallery-wrapper .gallery-item-name {font-size: 12px; padding: 9px 18px;}
+    .gallery-wrapper .gallery-item-name {font-size: 13px; padding: 9px 18px;bottom: 20px;}
     .home-app-section .home-app-wrapper {border-radius: 50px 0 0 50px;}
     .news-title h4 {font-size: 30px;}
 
@@ -288,7 +288,7 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .home-app-section .home-app-wrapper .app-btn-flex {gap: 15px;}
     .home-app-section::after {bottom: 30px;}
     .gallery-wrapper {height: 300px;}
-    .gallery-wrapper .gallery-item-name {font-size: 16px;}
+    .gallery-wrapper .gallery-item-name {font-size: 15px;padding: 10px 18px;}
     .news-title h4 {padding: 15px 0; font-size: 24px; margin-bottom: 20px;}
     .home-wait-section .wait-content-wrapper .wait-para p {font-size: 14px;}
 
@@ -445,6 +445,7 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .gallery-wrapper {height: 240px;}
     .news-title h4 {margin-top: 20px;}
     .hero-news-section img.poster-3 {margin-top: 20px;}
+    .gallery-wrapper .gallery-item-name {font-size: 13px;padding: 10px 9px;}
     /* allergen */
     .allergen-sec {padding: 0 0 0 0;margin-top: -30px;}
     .gallery-buttons { flex-direction: row; overflow-x: auto; padding: 0 15px; gap: 10px; }
@@ -592,6 +593,7 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .home-app-section .app-content h2 {font-size: 42px;}
     .home-app-section .home-app-wrapper .app-content {margin: 0 20px 30px 0;}
     .home-app-section::after {width: 250px; height: 400px;}
+    .gallery-wrapper .gallery-item-name {font-size: 15px;}
     /* events */
     .kitchen-sec h3, .latest-news h3, .honor-tit h3 {font-size: 30px;}
     .awards-slides .owl-item img {height: 160px;} 
