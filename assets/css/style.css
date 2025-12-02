@@ -88,6 +88,7 @@ header.hide {transform:translateY(-100%);}
 .home-hero-section {position: relative;padding: 0;overflow: hidden; }
 .home-hero-section::before {content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; background: var(--black); opacity: 0.5;}
 #main-video {position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: cover; z-index: 0;}
+#secondary-video {width: 100%; height: 100%; display: block;}
 .input-group {background: var(--white); padding: 10px; margin: 25px 0 0 0; width: 500px;}
 .home-hero-content {position: absolute; top: 0; left: 0; right: 0; bottom: 0; margin: auto; display: flex; width: 100%; height: 100%; flex-direction: column; align-items: center; justify-content: center; z-index: 1;}
 .home-hero-content .logo {display: block; margin: 0 auto; width: 400px;}
@@ -689,9 +690,8 @@ button.contact-btn {
     cursor: pointer;
     transition: all 0.3s ease;
 }
-
 button.contact-btn:hover {
-    background: #1e2652;
+    background: var(--secondary-color);
 }
 img.contact-img {
     position: absolute;
