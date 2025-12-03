@@ -318,5 +318,11 @@
     <!-- ionicons -->
     <!-- custome js -->
     <script src="./assets/js/script.js"></script>
+    <script>
+        var url = "https://aladdinsorder.com/location/-/"; 
+        // make sure that you enter the url of the franchise including https:// and /list/ at the end
+        // to customise the error for invalid alert use class invalidAlert or id invalidAlert
+        function checkPostCode(e){var t="[abcdefghijklmnoprstuwyz]",o="[abcdefghklmnopqrstuvwxy]",n="[abdefghjlnpqrstuwxyz]",s=new Array;s.push(new RegExp("^("+t+"{1}"+o+"?[0-9]{1,2})(\\s*)([0-9]{1}"+n+"{2})$","i")),s.push(new RegExp("^("+t+"{1}[0-9]{1}[abcdefghjkstuw]{1})(\\s*)([0-9]{1}"+n+"{2})$","i")),s.push(new RegExp("^("+t+"{1}"+o+"?[0-9]{1}[abehmnprvwxy]{1})(\\s*)([0-9]{1}"+n+"{2})$","i")),s.push(/^(GIR)(\s*)(0AA)$/i),s.push(/^(bfpo)(\s*)([0-9]{1,4})$/i),s.push(/^(bfpo)(\s*)(c\/o\s*[0-9]{1,3})$/i),s.push(/^([A-Z]{4})(\s*)(1ZZ)$/i);for(var p=e,c=!1,r=0;r<s.length;r++)if(s[r].test(p)){s[r].exec(p),p=(p=RegExp.$1.toUpperCase()+" "+RegExp.$3.toUpperCase()).replace(/C\/O\s*/,"c/o "),c=!0;break}return document.getElementById("postcode").value=p,!!c&&p}function customAlert(e,t){var o=document.createElement("div");o.innerHTML="<span class='invalidAlert' id='invalidAlert'>"+e+"</span>",setTimeout(function(){o.parentNode.removeChild(o)},t),document.querySelector(".ta-search").appendChild(o)}function search(){var e=document.getElementById("postcode").value;return checkPostCode(e)?window.location.replace(url+e):(document.getElementById("postcode").focus(),customAlert("Please enter a valid postcode","2000")),!1}
+    </script>
 </body>
 </html>
