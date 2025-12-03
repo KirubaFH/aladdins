@@ -73,40 +73,17 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
 
 
     /* Contact */
-    .contact-card {
-        padding: 20px;
-    }
-    .contact-card .card-div h5 {
-        font-size: 21px;
-    }
-    .contact-card .card-div p {
-        font-size: 18px;
-    }
-    .contact-card .card-div {
-        gap: 20px;
-    }
-    .contact-card .img-icon img {
-        max-width: 40px;
-    }
-    .card.form-card h3 {
-        font-size: 45px;
-    }
-    .card.form-card p.form-para {
-        font-size: 20px;
-        margin-top: 10px;
-    }
-    .card.form-card .form-control {
-        padding: 10px;
-    }
-    .card.form-card .contact-form {
-        padding: 0px;
-    }
-    img.contact-img {
-        max-width: 800px;
-    }
-    .card.form-card {
-        padding: 40px;
-    }
+    .contact-card {padding:20px;}
+.contact-card .card-div h5 {font-size:21px;}
+.contact-card .card-div p {font-size:18px;}
+.contact-card .card-div {gap:20px;}
+.contact-card .img-icon img {max-width:40px;}
+.card.form-card h3 {font-size:45px;}
+.card.form-card p.form-para {font-size:20px; margin-top:10px;}
+.card.form-card .form-control {padding:10px;}
+.card.form-card .contact-form {padding:0px;}
+img.contact-img {max-width:800px;}
+.card.form-card {padding:40px;}
 }
 @media (max-width: 1199px) {
     /* typo */
@@ -194,43 +171,18 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .indicates-row .allergen-indicates .main-icon {font-size: 14px;}
 
     /* Journey */
-    section.journey-section-new h2 {
-        font-size: 50px;
-    }
-    section.journey-section-new h3 {
-        font-size: 45px;
-    }
-    section.journey-section-new span {
-        font-size: 20px;
-    }
-    /* Contact */
-    .card.form-card h3 {
-        font-size: 40px;
-    }
-    .card.form-card p.form-para {
-        font-size: 18px;
-    }
-    .card.form-card .form-label {
-        font-size: 16px;
-    }
-    .card.form-card .contact-form .form {
-        font-size: 20px;
-    }
-    img.contact-img {
-        max-width: 600px;
-    }
-    .contact-card .card-div h5 {
-        font-size: 18px;
-    }
-    .contact-card .card-div p {
-        font-size: 16px;
-    }
-    .contact-card .card-div {
-        gap: 15px;
-    }
-    .contact-card .img-icon img {
-        max-width: 30px;
-    }
+    section.journey-section-new h2 {font-size:50px;}
+section.journey-section-new h3 {font-size:45px;}
+section.journey-section-new span {font-size:20px;}
+.card.form-card h3 {font-size:40px;}
+.card.form-card p.form-para {font-size:18px;}
+.card.form-card .form-label {font-size:16px;}
+.card.form-card .contact-form .form {font-size:20px;}
+img.contact-img {max-width:600px;}
+.contact-card .card-div h5 {font-size:18px;}
+.contact-card .card-div p {font-size:16px;}
+.contact-card .card-div {gap:15px;}
+.contact-card .img-icon img {max-width:30px;}
 }
 @media (max-width: 991px) {
 
@@ -281,7 +233,7 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .home-hero-content .order-btn {padding: 6px 12px;}
     .input-group {padding: 8px; width: 450px;}
     .home-banner-section .banner-wrapper {height: 300px; border-radius: 0 30px 30px 0;}
-    .home-banner-section .banner-wrapper::after {border-radius: 30px; bottom: 30px; left: 26%;}
+    .home-banner-section .banner-wrapper::after {border-radius: 30px; bottom: 35px; left: 29%;}
     /* .home-wait-section .wait-content-wrapper {padding: 25px 25px;} */
     .home-wait-section .wait-content-wrapper .wait-title-wrapper::after {right: -20px;}
     .home-app-section .app-content h2 {font-size: 46px;}
@@ -348,43 +300,17 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .input-group .info-icon-wrapper:hover .info-popup { bottom: 40px;}
 
     /* Journey */
-    .journey-timeline .timeline-card {
-        width: 45%;
-    }
-    .journey-timeline .timeline-cont {
-        font-size: 14px;
-    }
-    .journey-timeline .timeline-card {
-        min-height: 90px;
-    }
-
-    /* Journey */
-    .contact-card {
-        height: 140px;
-        margin: 10px;
-    }
-    .card.form-card .contact-form .form {
-        margin-top: 10px;
-    }
-    .card.form-card h3 {
-        font-size: 35px;
-    }
-    img.contact-img {
-        max-width: 500px;
-        right: -140px;
-    }
-    .card.form-card .contact-form .form {
-        margin-top: 15px;
-    }
-    .card.form-card p.form-para {
-        font-size: 16px;
-    }
-    .card.form-card .form-label {
-        font-size: 15px;
-    }
-    .contact-card {
-        justify-content: center;
-    }
+    .journey-timeline .timeline-card {width:45%;}
+.journey-timeline .timeline-cont {font-size:14px;}
+.journey-timeline .timeline-card {min-height:90px;}
+.contact-card {height:140px; margin:10px;}
+.card.form-card .contact-form .form {margin-top:10px;}
+.card.form-card h3 {font-size:35px;}
+img.contact-img {max-width:500px; right:-140px;}
+.card.form-card .contact-form .form {margin-top:15px;}
+.card.form-card p.form-para {font-size:16px;}
+.card.form-card .form-label {font-size:15px;}
+.contact-card {justify-content:center;}
 }
 @media (max-width: 767px) {
     /* typo */
@@ -497,67 +423,22 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .checkbox-input-group .checkbox-label {font-size: 12px;}
     .res-center {justify-content: center;}
 
-    .no-sm-gutters {
-        margin-right: 0;
-        margin-left: 0;
-    }
-    .no-sm-gutters > .col,
-    .no-sm-gutters > [class*="col-"] {
-        padding-right: 0;
-        padding-left: 0;
-    }
-
-    /* Journey */
-    section.journey-section-new h2 {
-        font-size: 35px;
-    }
-    section.journey-section-new span {
-        font-size: 16px;
-    }
-    section.journey-section-new h3 {
-        font-size: 33px;
-    }
-    .journey-timeline .flex-card {
-        flex-direction: column;
-    }
-    .journey-timeline .timeline-card {
-        width: 90%;
-        margin-top: 20px;
-    }
-    .journey-timeline .timeline-card.right {
-        margin-top: 20px;
-    }
-    .journey-timeline::before {
-        content: unset;
-    }
-    .journey-timeline .flex-card::before {
-        content: unset;
-        right: unset;
-    }
-    /* Contact */
-    .contact-card {
-        height: 180px;
-        justify-content: center;
-        margin: 10px 0px;
-    }
-    .contact-card .card-div {
-        flex-direction: column;
-    }
-    .contact-card .card-div p br {
-        display: none;
-    }
-    .contact-card .card-div .cont {
-        text-align: center;
-    }
-    img.contact-img {
-        position: relative;
-        right: 0;
-        margin-top: 20px;
-        max-width: 100%;
-    }
-    section.form-section {
-        padding-bottom: 0px;
-    }
+    .no-sm-gutters {margin-right:0; margin-left:0;}
+.no-sm-gutters > .col, .no-sm-gutters > [class*="col-"] {padding-right:0; padding-left:0;}
+section.journey-section-new h2 {font-size:35px;}
+section.journey-section-new span {font-size:16px;}
+section.journey-section-new h3 {font-size:33px;}
+.journey-timeline .flex-card {flex-direction:column;}
+.journey-timeline .timeline-card {width:90%; margin-top:20px;}
+.journey-timeline .timeline-card.right {margin-top:20px;}
+.journey-timeline::before {content:unset;}
+.journey-timeline .flex-card::before {content:unset; right:unset;}
+.contact-card {height:180px; justify-content:center; margin:10px 0px;}
+.contact-card .card-div {flex-direction:column;}
+.contact-card .card-div p br {display:none;}
+.contact-card .card-div .cont {text-align:center;}
+img.contact-img {position:relative; right:0; margin-top:20px; max-width:100%;}
+section.form-section {padding-bottom:0px;}
     .main-content-column {padding: 20px 0px 0px 0px;}
 }
 @media (max-width: 575px) {
@@ -588,7 +469,7 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     .home-hero-content .order-btn {padding: 4px 8px; font-size: 14px;}
     .gallery-wrapper {height: 300px;}
     .home-banner-section .banner-wrapper {height: 250px; width: 95%;}
-    .home-banner-section .banner-wrapper::after {width: 72%;}
+    .home-banner-section .banner-wrapper::after {width: 50%; bottom: 40px;left: 45%;}
     .home-wait-section .wait-content-wrapper .wait-title-wrapper span {left: 150px; text-align: center; font-size: 110px;}
     .home-app-section .home-app-wrapper {width: 100%; max-width: 450px;}
     .home-app-section .app-content h2 {font-size: 42px;}
@@ -631,36 +512,15 @@ a[href^=tel] {text-decoration:inherit;color: inherit; }
     a.lightbox-btn {padding: 6px 14px;color: var(--primary-color);font-size: 16px;}
 
     /* Contact */
-    section.contact-section ,section.form-section {
-        padding: 20px 0px;
-    }
-    section.form-section {
-        padding-bottom: 0px;
-    }
-    .contact-card {
-        height: 170px;
-    }
-    .contact-card .card-div p {
-        font-size: 15px;
-    }
-    .card.form-card {
-        padding: 20px;
-        border-radius: 30px;
-    }
-    .card.form-card h3 {
-        font-size: 20px;
-    }
-    .card.form-card p.form-para {
-        font-size: 14px;
-    }
-    button.contact-btn {
-        padding: 8px 35px;
-        font-size: 16px;
-        margin: 15px auto 0px auto;
-    }
-    .card.form-card .error-message {
-        font-size: 15px;
-    }
+    section.contact-section , section.form-section {padding:20px 0px;}
+section.form-section {padding-bottom:0px;}
+.contact-card {height:170px;}
+.contact-card .card-div p {font-size:15px;}
+.card.form-card {padding:20px; border-radius:30px;}
+.card.form-card h3 {font-size:20px;}
+.card.form-card p.form-para {font-size:14px;}
+button.contact-btn {padding:8px 35px; font-size:16px; margin:15px auto 0px auto;}
+.card.form-card .error-message {font-size:15px;}
 }
 
 @media (max-width: 425px) {
