@@ -6,12 +6,16 @@ document.addEventListener("DOMContentLoaded", function() {
         "cannock-branch": { open: 720, close: 180 },        // 12:00-3:00 (720-180, crosses midnight)
         "halesowen-branch": { open: 720, close: 180 },      // 12:00-3:00 (720-180, crosses midnight)
         "birmingham-branch": { open: 720, close: 180 },     // 12:00-3:00 (720-180, crosses midnight)
+        "longbridge-branch": { open: 720, close: 180 },     // 12:00-3:00 (720-180, crosses midnight)
+        "handsacre-branch": { open: 720, close: 1320 },     // 12:00-10:00 (720-1320, crosses midnight)
+        "netherton-branch": { open: 720, close: 1380 },     // 12:00-11:00 (720-1380, crosses midnight)
         "upperGornal-branch": { open: 720, close: 0 },      // 12:00-0:00 (midnight)
+        "stafford-branch": { open: 720, close: 0 },         // 12:00-0:00 (midnight)
         "wednesbury-branch": { open: 900, close: 180 },     // 15:00-3:00
         "willenhall-branch": { open: 900, close: 180 },     // 15:00-3:00
         "wolverhampton-branch": { open: 900, close: 180 },  // 15:00-3:00
-        "greatBarr-branch": { open: 901, close: 181 },    // 15:01-3:01
-        "Tipton-branch": { open: 720, close: 180 }, 
+        "tipton-branch": { open: 720, close: 180 },         // 12:00-3:00
+        "greatBarr-branch": { open: 901, close: 181 },      // 15:01-3:01
     };
 
     function getUKTime() {
@@ -172,6 +176,51 @@ document.addEventListener("DOMContentLoaded", function () {
       4: { day: 'Thu', hours: '12:00 PM - 03:00 AM' },
       5: { day: 'Fri', hours: '12:00 PM - 03:00 AM' },
       6: { day: 'Sat', hours: '12:00 PM - 03:00 AM' }
+    },
+    Stafford: {
+      0: { day: 'Sun', hours: '12:00 PM - 12:00 AM' },
+      1: { day: 'Mon', hours: '12:00 PM - 12:00 AM' },
+      2: { day: 'Tue', hours: '12:00 PM - 12:00 AM' },
+      3: { day: 'Wed', hours: '12:00 PM - 12:00 AM' },
+      4: { day: 'Thu', hours: '12:00 PM - 12:00 AM' },
+      5: { day: 'Fri', hours: '12:00 PM - 12:00 AM' },
+      6: { day: 'Sat', hours: '12:00 PM - 12:00 AM' }
+    },
+    Netherton: {
+      0: { day: 'Sun', hours: '12:00 PM - 11:00 PM' },
+      1: { day: 'Mon', hours: '12:00 PM - 11:00 PM' },
+      2: { day: 'Tue', hours: '12:00 PM - 11:00 PM' },
+      3: { day: 'Wed', hours: '12:00 PM - 11:00 PM' },
+      4: { day: 'Thu', hours: '12:00 PM - 11:00 PM' },
+      5: { day: 'Fri', hours: '12:00 PM - 11:00 PM' },
+      6: { day: 'Sat', hours: '12:00 PM - 11:00 PM' }
+    },
+    Longbridge: {
+      0: { day: 'Sun', hours: '12:00 PM - 03:00 AM' },
+      1: { day: 'Mon', hours: '12:00 PM - 03:00 AM' },
+      2: { day: 'Tue', hours: '12:00 PM - 03:00 AM' },
+      3: { day: 'Wed', hours: '12:00 PM - 03:00 AM' },
+      4: { day: 'Thu', hours: '12:00 PM - 03:00 AM' },
+      5: { day: 'Fri', hours: '12:00 PM - 03:00 AM' },
+      6: { day: 'Sat', hours: '12:00 PM - 03:00 AM' }
+    },
+    Handsacre: {
+      0: { day: 'Sun', hours: '12:00 PM - 03:00 AM' },
+      1: { day: 'Mon', hours: '12:00 PM - 03:00 AM' },
+      2: { day: 'Tue', hours: '12:00 PM - 03:00 AM' },
+      3: { day: 'Wed', hours: '12:00 PM - 03:00 AM' },
+      4: { day: 'Thu', hours: '12:00 PM - 03:00 AM' },
+      5: { day: 'Fri', hours: '12:00 PM - 03:00 AM' },
+      6: { day: 'Sat', hours: '12:00 PM - 03:00 AM' }
+    },
+    Handsacre: {
+      0: { day: 'Sun', hours: '12:00 PM - 10:00 PM' },
+      1: { day: 'Mon', hours: '12:00 PM - 10:00 PM' },
+      2: { day: 'Tue', hours: '12:00 PM - 10:00 PM' },
+      3: { day: 'Wed', hours: '12:00 PM - 10:00 PM' },
+      4: { day: 'Thu', hours: '12:00 PM - 10:00 PM' },
+      5: { day: 'Fri', hours: '12:00 PM - 10:00 PM' },
+      6: { day: 'Sat', hours: '12:00 PM - 10:00 PM' }
     },
   };
 

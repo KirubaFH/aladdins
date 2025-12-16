@@ -279,7 +279,7 @@ span.error-msg{display: block; width:100%; text-align: left;color: var(--seconda
 
 /* stores */
 .stories-sec {padding: 0px 0 75px 0;margin-top: -50px;}
-.story-list {row-gap:50px;column-gap: 3%;}
+.story-list {row-gap:50px;column-gap: 3%; justify-content: center;}
 .story-list > .col-md-6{flex: 0 1 48.5% !important;width: 48.5% !important;max-width: 48.5% !important;padding: 0 !important;}
 .alla-loc {display:flex; column-gap:30px; flex-wrap:wrap; background:var(--primary-color); border-radius:150px; padding:25px; border:5px solid var(--white); align-items:center;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;transition: all 0.5s ease;position: relative;}
 .alla-loc:after{position: absolute;content: "";left:60%;top:50%;transform: translate(-40% , -50%);width: 245px;height: 125px;background: url(../images/franchise/logoo.png) no-repeat;background-size: cover;opacity: 0.05;}
