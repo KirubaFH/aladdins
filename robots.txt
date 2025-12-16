@@ -1,0 +1,14 @@
+user-agent: *
+
+crawl-delay: 10
+allow: /
+
+disallow: /franchise.html
+
+Sitemap: https://aladdinspizza.co.uk/sitemap.xml
+
+user-agent: AdsBot-Google
+disallow: /*.css
+disallow: /*.js
+disallow: /*.woff
+disallow: /*.woff2
